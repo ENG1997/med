@@ -130,14 +130,14 @@ if pages == 'Search mode':
         my_bar.progress(x + 1)
 
     if tk == 1:
-        col1, col2 = st.columns([1.5, 5])
+        col1, col2 = st.columns([2, 5])
 
         i0 = df[df['Book_title'] == selected_book_name].index.values[0]
 
         with col1:
             st.image(df['image'].values[i0],
                      caption=selected_book_name,
-                     width=180)
+                     width=175)
         with col2:
             st.write("Description : ",
                      df['Description'].values[i0])
