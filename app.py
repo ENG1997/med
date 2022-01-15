@@ -152,6 +152,8 @@ if pages == 'Search mode':
 
         '\n'
         '\n'
+        '\n'
+        '\n'
         st.title('You May Also Like.....')
         '\n'
         '\n'
@@ -183,6 +185,11 @@ if pages == 'Search mode':
                                  df['Reviews'].values[i1])
                         st.write("No. Of Pages : ",
                                  df['Number_Of_Pages'].values[i1])
+                        '\n'
+                        '\n'
+                        '\n'
+                        '\n'
+        
                 if tk == 1:
                     col1, col2 = st.columns([1.5, 5])
                     with col1:
@@ -191,6 +198,7 @@ if pages == 'Search mode':
                                  width=150)
 
                         '\n'
+                        
 
                     with col2:
                         st.write("Description : ",
@@ -203,6 +211,10 @@ if pages == 'Search mode':
                                  df['Reviews'].values[i2])
                         st.write("No. Of Pages : ",
                                  df['Number_Of_Pages'].values[i2])
+                        '\n'
+                        '\n'
+                        '\n'
+                        '\n'
                 if tk == 1:
                     col1, col2 = st.columns([1.5, 5])
                     with col1:
@@ -223,6 +235,10 @@ if pages == 'Search mode':
                                  df['Reviews'].values[i3])
                         st.write("No. Of Pages : ",
                                  df['Number_Of_Pages'].values[i3])
+                        '\n'
+                        '\n'
+                        '\n'
+                        '\n'
                 if tk == 1:
                     col1, col2 = st.columns([1.5, 5])
                     with col1:
