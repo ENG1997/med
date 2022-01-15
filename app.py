@@ -107,7 +107,7 @@ Y = desc_vectorizer.fit_transform(df['clean_Description'])
 desc_vectors = Y.toarray()
 
 tk = 0
-pages = st.sidebar.selectbox('Chose your mode (Default : Search mode) ', ['' ,'Search mode', 'Library Mode'])
+pages = st.sidebar.selectbox('Chose your mode (Default : Search mode) ', ['Search mode', 'Library Mode'])
 if pages == 'Search mode':
     col1, col2 = st.columns([10, 1])
     books_dict = pd.read_csv('prog_book.csv')
