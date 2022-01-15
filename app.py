@@ -137,7 +137,7 @@ if pages == 'Search mode':
         with col1:
             st.image(df['image'].values[i0],
                      caption=selected_book_name,
-                     width=200)
+                     width=180)
         with col2:
             st.write("Description : ",
                      df['Description'].values[i0])
