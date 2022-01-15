@@ -189,6 +189,7 @@ if pages == 'Search mode':
                         '\n'
                         '\n'
                         '\n'
+                        st.progress(0)
         
                 if tk == 1:
                     col1, col2 = st.columns([1.5, 5])
@@ -215,6 +216,7 @@ if pages == 'Search mode':
                         '\n'
                         '\n'
                         '\n'
+                        st.progress(0)
                 if tk == 1:
                     col1, col2 = st.columns([1.5, 5])
                     with col1:
@@ -239,6 +241,7 @@ if pages == 'Search mode':
                         '\n'
                         '\n'
                         '\n'
+                        st.progress(0)
                 if tk == 1:
                     col1, col2 = st.columns([1.5, 5])
                     with col1:
