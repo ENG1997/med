@@ -130,7 +130,7 @@ if pages == 'Search mode':
         my_bar.progress(x + 1)
 
     if tk == 1:
-        col1, col2 = st.columns([1.7, 5])
+        col1, col2 = st.columns([1.5, 5])
 
         i0 = df[df['Book_title'] == selected_book_name].index.values[0]
 
@@ -173,7 +173,7 @@ if pages == 'Search mode':
                                  width=150)
 
                         '\n'
-                        st.progress(0)
+                        
 
                     with col2:
                         st.write("Description : ",
@@ -200,7 +200,6 @@ if pages == 'Search mode':
                                  width=150)
 
                         '\n'
-                        st.progress(0)
                         
 
                     with col2:
@@ -227,7 +226,6 @@ if pages == 'Search mode':
                                  width=150)
 
                         '\n'
-                        st.progress(0)
 
                     with col2:
                         st.write("Description : ",
