@@ -166,11 +166,11 @@ if pages == 'Search mode':
                 '\n'
 
                 if tk == 1:
-                    col1, col2 = st.columns([1.5, 5])
+                    col1, col2 = st.columns([2, 5])
                     with col1:
                         st.image(df['image'].values[i1],
                                  caption=df['Book_title'].values[i1],
-                                 width=150)
+                                 width=200)
 
                         '\n'
                         
@@ -193,11 +193,11 @@ if pages == 'Search mode':
                         st.progress(0)
         
                 if tk == 1:
-                    col1, col2 = st.columns([1.5, 5])
+                    col1, col2 = st.columns([2, 5])
                     with col1:
                         st.image(df['image'].values[i2],
                                  caption=df['Book_title'].values[i2],
-                                 width=150)
+                                 width=200)
 
                         '\n'
                         
@@ -219,11 +219,11 @@ if pages == 'Search mode':
                         '\n'
                         st.progress(0)
                 if tk == 1:
-                    col1, col2 = st.columns([1.5, 5])
+                    col1, col2 = st.columns([2, 5])
                     with col1:
                         st.image(df['image'].values[i3],
                                  caption=df['Book_title'].values[i3],
-                                 width=150)
+                                 width=200)
 
                         '\n'
 
@@ -244,11 +244,11 @@ if pages == 'Search mode':
                         '\n'
                         st.progress(0)
                 if tk == 1:
-                    col1, col2 = st.columns([1.5, 5])
+                    col1, col2 = st.columns([2, 5])
                     with col1:
                         st.image(df['image'].values[i4],
                                  caption=df['Book_title'].values[i4],
-                                 width=150)
+                                 width=200)
 
                         '\n'
 
