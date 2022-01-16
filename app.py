@@ -133,7 +133,7 @@ if pages == 'Search mode':
         my_bar.progress(x + 1)
 
     if tk == 1:
-        col1, col2 = st.columns([2, 5])
+        col1, col2 = st.columns([1.5, 5])
 
         i0 = df[df['Book_title'] == selected_book_name].index.values[0]
 
@@ -170,7 +170,7 @@ if pages == 'Search mode':
                 
                 st.progress(0)
                 if tk == 1:
-                    col1, col2 = st.columns([2, 5])
+                    col1, col2 = st.columns([1.5, 5])
                     with col1:
                         st.image(df['image'].values[i1],
                                  caption=df['Book_title'].values[i1],
@@ -199,7 +199,7 @@ if pages == 'Search mode':
                         
                 st.progress(0)
                 if tk == 1:
-                    col1, col2 = st.columns([2, 5])
+                    col1, col2 = st.columns([1.5, 5])
                     with col1:
                         st.image(df['image'].values[i2],
                                  caption=df['Book_title'].values[i2],
@@ -227,7 +227,7 @@ if pages == 'Search mode':
                         
                 st.progress(0)        
                 if tk == 1:
-                    col1, col2 = st.columns([2, 5])
+                    col1, col2 = st.columns([1.5, 5])
                     with col1:
                         st.image(df['image'].values[i3],
                                  caption=df['Book_title'].values[i3],
@@ -253,7 +253,7 @@ if pages == 'Search mode':
                         '\n'
                 st.progress(0)        
                 if tk == 1:
-                    col1, col2 = st.columns([2, 5])
+                    col1, col2 = st.columns([1.5, 5])
                     with col1:
                         st.image(df['image'].values[i4],
                                  caption=df['Book_title'].values[i4],
