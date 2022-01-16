@@ -116,6 +116,9 @@ if pages == 'Search mode':
         selected_book_name = st.selectbox('Enter book name that you liked : ', books['Book_title'].values)
 
         b1 = st.button('Search')
+        '\n'
+        '\n'
+        '\n'
 
         if b1:
             st.balloons()
@@ -137,7 +140,7 @@ if pages == 'Search mode':
         with col1:
             st.image(df['image'].values[i0],
                      caption=selected_book_name,
-                     width=200)
+                     width=195)
         with col2:
             st.write("Description : ",
                      df['Description'].values[i0])
@@ -170,7 +173,7 @@ if pages == 'Search mode':
                     with col1:
                         st.image(df['image'].values[i1],
                                  caption=df['Book_title'].values[i1],
-                                 width=198)
+                                 width=195)
 
                         '\n'
                         
@@ -199,7 +202,7 @@ if pages == 'Search mode':
                     with col1:
                         st.image(df['image'].values[i2],
                                  caption=df['Book_title'].values[i2],
-                                 width=198)
+                                 width=195)
 
                         '\n'
                         
@@ -227,7 +230,7 @@ if pages == 'Search mode':
                     with col1:
                         st.image(df['image'].values[i3],
                                  caption=df['Book_title'].values[i3],
-                                 width=198)
+                                 width=195)
 
                         '\n'
 
@@ -253,7 +256,7 @@ if pages == 'Search mode':
                     with col1:
                         st.image(df['image'].values[i4],
                                  caption=df['Book_title'].values[i4],
-                                 width=198)
+                                 width=195)
 
                         '\n'
 
