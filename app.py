@@ -179,7 +179,7 @@ if pages == 'Search mode':
                         
 
                     with col2:
-                        st.progress(0)
+                        
                         st.write("Description : ",
                                  df['Description'].values[i1])
                         st.write("Rating : ",
@@ -196,7 +196,7 @@ if pages == 'Search mode':
                         '\n'
                        
                         
-        
+                st.progress(0)
                 if tk == 1:
                     col1, col2 = st.columns([2, 5])
                     with col1:
