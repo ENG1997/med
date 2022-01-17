@@ -90,7 +90,8 @@ st.set_page_config(page_title="RAM Library", page_icon="🧊", initial_sidebar_s
                    menu_items={
                        'Get help': 'https://www.instagram.com/eng_mk97/',
                        'Report a bug': "https://www.instagram.com/eng_mk97/",
-                       'About': "# This is a header. This is an *extremely* cool app!"
+                       'About': " https://www.instagram.com/eng_mk97/
+                                  https://www.instagram.com/ali_anmar_17/ "
                    }
                    )
 
