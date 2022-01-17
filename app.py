@@ -290,7 +290,7 @@ if pages == 'Library Mode':
                 st.image(df['image'].values[j],
                          caption=df['Book_title'].values[j],
                          width=198)
-                st.button(' ⠀⠀ ⠀ ⠀Download ⠀⠀ ⠀ ⠀', key=j)
+                st.button(' ⠀⠀ ⠀ Download ⠀⠀⠀ ⠀', key=j)
 
             with col2:
                 st.write("Description : ",
