@@ -121,8 +121,14 @@ books = pd.DataFrame(books_dict)
 
 
 tk = 0
-pages = st.sidebar.selectbox('Chose your mode (Default : Search mode) ', ['Search mode', 'Library Mode'])
-if pages == 'Search mode':
+
+pages = st.sidebar.selectbox('Chose your mode (Default : Search mode) ', ['Books',
+                                                                          'كلية الهندسة',
+                                                                          'كلية الطب',
+                                                                          'كلية طب الاسنان',
+                                                                          'كلية الصيدلة'])
+
+if pages == 'Books':
     col1, col2 = st.columns([10, 1])
     
     with col1:
@@ -288,7 +294,7 @@ if pages == 'Search mode':
                                  df['Number_Of_Pages'].values[i4])
                 st.progress(0)
       
-if pages == 'Library Mode':
+if pages == 'كلية الهندسة':
     with st.sidebar:
         dep = st.radio('Select Your Department ', ['هندسة الحاسوب و البرمجيات',
                                                    'هندسة العمارة',
