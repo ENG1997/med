@@ -86,6 +86,7 @@ def get_recommendations_posters(value_of_element, feature_locate, vectors_array,
 
     return
 
+st.set_page_config(page_title="RAM Library", page_icon="🧊", initial_sidebar_state="auto")
 
 st.title("R-M-A Book Recommendation ")
 df = pd.read_csv('prog_book.csv')
