@@ -140,7 +140,7 @@ if pages == 'Search mode':
         with col1:
             st.image(df['image'].values[i0],
                      caption=selected_book_name,
-                     width=195)
+                     width=150)
         with col2:
             st.write("Description : ",
                      df['Description'].values[i0])
@@ -174,7 +174,7 @@ if pages == 'Search mode':
                     with col1:
                         st.image(df['image'].values[i1],
                                  caption=df['Book_title'].values[i1],
-                                 width=195)
+                                 width=150)
 
                         '\n'
                         
@@ -203,7 +203,7 @@ if pages == 'Search mode':
                     with col1:
                         st.image(df['image'].values[i2],
                                  caption=df['Book_title'].values[i2],
-                                 width=195)
+                                 width=150)
 
                         '\n'
                         
@@ -231,7 +231,7 @@ if pages == 'Search mode':
                     with col1:
                         st.image(df['image'].values[i3],
                                  caption=df['Book_title'].values[i3],
-                                 width=195)
+                                 width=150)
 
                         '\n'
 
@@ -257,7 +257,7 @@ if pages == 'Search mode':
                     with col1:
                         st.image(df['image'].values[i4],
                                  caption=df['Book_title'].values[i4],
-                                 width=195)
+                                 width=150)
 
                         '\n'
 
