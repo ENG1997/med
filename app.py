@@ -86,7 +86,12 @@ def get_recommendations_posters(value_of_element, feature_locate, vectors_array,
 
     return
 
-st.set_page_config(page_title="RAM Library", page_icon="🧊", initial_sidebar_state="auto")
+st.set_page_config(page_title="RAM Library", page_icon="🧊", initial_sidebar_state="auto",
+     menu_items={
+         'contact': 'https://www.instagram.com/eng_mk97/',
+         'Report a bug': "https://www.instagram.com/eng_mk97/",
+         'About us ': "# This is a header. This is an *extremely* cool app!"
+     })
 
 st.title("R-M-A Book Recommendation ")
 df = pd.read_csv('prog_book.csv')
