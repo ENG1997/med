@@ -290,15 +290,15 @@ if pages == 'Search mode':
       
 if pages == 'Library Mode':
     with st.sidebar:
-        dep = st.radio('Select Your Department ', ['Computer Engineering',
-                                                   'Architecture Engineering',
-                                                   'Civil Engineering',
-                                                   'Electrical Engineering',
-                                                   'Mechanical Engineering ',
-                                                   'Environmental Engineering',
-                                                   'Road and Transportation Engineering',
-                                                   'Materials Engineering',
-                                                   'Water Resources Engineering'])
+        dep = st.radio('Select Your Department ', ['هندسة الحاسوب و البرمجيات',
+                                                   'هندسة العمارة',
+                                                   'الهندسة المدنية',
+                                                   'الهندسة الكهربائية',
+                                                   'الهندسة الكهربائية',
+                                                   'هندسة البيئة',
+                                                   'هندسة الطرق والنقل',
+                                                   'هندسة المواد',
+                                                   'هندسة الموارد المائية'])
 
     if dep == 'Computer Engineering':
         selected_book_name_dep = st.selectbox('', books['Book_title'].values)
