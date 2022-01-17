@@ -122,13 +122,12 @@ books = pd.DataFrame(books_dict)
 
 tk = 0
 
-pages = st.sidebar.selectbox('Chose your mode (Default : Search mode) ', ['Books',
-                                                                          'كلية الهندسة',
-                                                                          'كلية الطب',
-                                                                          'كلية طب الاسنان',
-                                                                          'كلية الصيدلة'])
-
-if pages == 'Books':
+pages = st.sidebar.selectbox('Chose your mode (Default : All Books) ', ['All Books',
+                                                                        'Collage of Engineering',
+                                                                        'College of Medicine',
+                                                                        'College of Dentistry',
+                                                                        'College of Pharmacy '])
+if pages == 'All Books':
     col1, col2 = st.columns([10, 1])
     
     with col1:
@@ -294,19 +293,19 @@ if pages == 'Books':
                                  df['Number_Of_Pages'].values[i4])
                 st.progress(0)
       
-if pages == 'كلية الهندسة':
+if pages == 'Collage of Engineering':
     with st.sidebar:
-        dep = st.radio('Select Your Department ', ['هندسة الحاسوب و البرمجيات',
-                                                   'هندسة العمارة',
-                                                   'الهندسة المدنية',
-                                                   'الهندسة الكهربائية',
-                                                   'الهندسة الكهربائية',
-                                                   'هندسة البيئة',
-                                                   'هندسة الطرق والنقل',
-                                                   'هندسة المواد',
-                                                   'هندسة الموارد المائية'])
+        dep = st.radio('Select Your Department ', ['Computer Engineering&Software',
+                                                   'Architecture Engineering',
+                                                   'Civil Engineering',
+                                                   'Electrical Engineering',
+                                                   'Mechanical Engineering ',
+                                                   'Environmental Engineering',
+                                                   'Road and Transportation Engineering',
+                                                   'Materials Engineering',
+                                                   'Water Resources Engineering'])
 
-    if dep == 'Computer Engineering':
+    if dep == 'Computer Engineering&Software':
         selected_book_name_dep = st.selectbox('', books['Book_title'].values)
 
         bsearch = st.button('Search')
@@ -336,60 +335,6 @@ if pages == 'كلية الهندسة':
                 st.write("No. Of Pages : ",
                          df['Number_Of_Pages'].values[id0])
 
-        j = 0
-        for i in books:
-            while j < 5:
-                st.progress(100)
-                col1, col2 = st.columns([2, 5])
-                with col1:
-                    st.image(df['image'].values[j],
-                             caption=df['Book_title'].values[j],
-                             width=198)
-
-                    st.button('Download', key=j)
-
-                with col2:
-                    st.write("Description : ",
-                             df['Description'].values[j])
-                    st.write("Rating : ",
-                             df['Rating'].values[j])
-                    st.write("Price : ",
-                             df['Price'].values[j])
-                    st.write("Reviews : ",
-                             df['Reviews'].values[j])
-                    st.write("No. Of Pages : ",
-                             df['Number_Of_Pages'].values[j])
-                    j += 1
-
-    elif dep == 'Civilian Engineering':
-        selected_book_name_dep = st.selectbox('', books['Book_title'].values)
-
-        bsearch = st.button('Search')
-        tk1 = 0
-        if bsearch:
-            tk1 = 1
-
-        if tk1 == 1:
-            col1, col2 = st.columns([2, 5])
-
-            id0 = df[df['Book_title'] == selected_book_name_dep].index.values[0]
-
-            with col1:
-                st.image(df['image'].values[id0],
-                         caption=selected_book_name_dep,
-                         width=198)
-
-            with col2:
-                st.write("Description : ",
-                         df['Description'].values[id0])
-                st.write("Rating : ",
-                         df['Rating'].values[id0])
-                st.write("Price : ",
-                         df['Price'].values[id0])
-                st.write("Reviews : ",
-                         df['Reviews'].values[id0])
-                st.write("No. Of Pages : ",
-                         df['Number_Of_Pages'].values[id0])
         j = 0
         for i in books:
             while j < 5:
@@ -469,6 +414,281 @@ if pages == 'كلية الهندسة':
                     st.write("No. Of Pages : ",
                              df['Number_Of_Pages'].values[j])
                     j += 1
+
+    elif dep == 'Civilian Engineering':
+        selected_book_name_dep = st.selectbox('', books['Book_title'].values)
+
+        bsearch = st.button('Search')
+        tk1 = 0
+        if bsearch:
+            tk1 = 1
+
+        if tk1 == 1:
+            col1, col2 = st.columns([2, 5])
+
+            id0 = df[df['Book_title'] == selected_book_name_dep].index.values[0]
+
+            with col1:
+                st.image(df['image'].values[id0],
+                         caption=selected_book_name_dep,
+                         width=198)
+
+            with col2:
+                st.write("Description : ",
+                         df['Description'].values[id0])
+                st.write("Rating : ",
+                         df['Rating'].values[id0])
+                st.write("Price : ",
+                         df['Price'].values[id0])
+                st.write("Reviews : ",
+                         df['Reviews'].values[id0])
+                st.write("No. Of Pages : ",
+                         df['Number_Of_Pages'].values[id0])
+        j = 0
+        for i in books:
+            while j < 5:
+                st.progress(100)
+                col1, col2 = st.columns([2, 5])
+                with col1:
+                    st.image(df['image'].values[j],
+                             caption=df['Book_title'].values[j],
+                             width=198)
+
+                    st.button('Download', key=j)
+
+                with col2:
+                    st.write("Description : ",
+                             df['Description'].values[j])
+                    st.write("Rating : ",
+                             df['Rating'].values[j])
+                    st.write("Price : ",
+                             df['Price'].values[j])
+                    st.write("Reviews : ",
+                             df['Reviews'].values[j])
+                    st.write("No. Of Pages : ",
+                             df['Number_Of_Pages'].values[j])
+                    j += 1
+
+    elif dep == 'Electrical Engineering':
+        selected_book_name_dep = st.selectbox('', books['Book_title'].values)
+
+        bsearch = st.button('Search')
+        tk1 = 0
+        if bsearch:
+            tk1 = 1
+
+        if tk1 == 1:
+            col1, col2 = st.columns([2, 5])
+
+            id0 = df[df['Book_title'] == selected_book_name_dep].index.values[0]
+
+            with col1:
+                st.image(df['image'].values[id0],
+                         caption=selected_book_name_dep,
+                         width=198)
+
+            with col2:
+                st.write("Description : ",
+                         df['Description'].values[id0])
+                st.write("Rating : ",
+                         df['Rating'].values[id0])
+                st.write("Price : ",
+                         df['Price'].values[id0])
+                st.write("Reviews : ",
+                         df['Reviews'].values[id0])
+                st.write("No. Of Pages : ",
+                         df['Number_Of_Pages'].values[id0])
+        j = 0
+        for i in books:
+            while j < 5:
+                st.progress(100)
+                col1, col2 = st.columns([2, 5])
+                with col1:
+                    st.image(df['image'].values[j],
+                             caption=df['Book_title'].values[j],
+                             width=198)
+
+                    text_contents = '''This is some text'''
+                    st.download_button('Download', text_contents, key=j)
+
+                with col2:
+                    st.write("Description : ",
+                             df['Description'].values[j])
+                    st.write("Rating : ",
+                             df['Rating'].values[j])
+                    st.write("Price : ",
+                             df['Price'].values[j])
+                    st.write("Reviews : ",
+                             df['Reviews'].values[j])
+                    st.write("No. Of Pages : ",
+                             df['Number_Of_Pages'].values[j])
+                    j += 1
+
+    elif dep == 'Environmental Engineering':
+        selected_book_name_dep = st.selectbox('', books['Book_title'].values)
+
+        bsearch = st.button('Search')
+        tk1 = 0
+        if bsearch:
+            tk1 = 1
+
+        if tk1 == 1:
+            col1, col2 = st.columns([2, 5])
+
+            id0 = df[df['Book_title'] == selected_book_name_dep].index.values[0]
+
+            with col1:
+                st.image(df['image'].values[id0],
+                         caption=selected_book_name_dep,
+                         width=198)
+
+            with col2:
+                st.write("Description : ",
+                         df['Description'].values[id0])
+                st.write("Rating : ",
+                         df['Rating'].values[id0])
+                st.write("Price : ",
+                         df['Price'].values[id0])
+                st.write("Reviews : ",
+                         df['Reviews'].values[id0])
+                st.write("No. Of Pages : ",
+                         df['Number_Of_Pages'].values[id0])
+        j = 0
+        for i in books:
+            while j < 5:
+                st.progress(100)
+                col1, col2 = st.columns([2, 5])
+                with col1:
+                    st.image(df['image'].values[j],
+                             caption=df['Book_title'].values[j],
+                             width=198)
+
+                    text_contents = '''This is some text'''
+                    st.download_button('Download', text_contents, key=j)
+
+                with col2:
+                    st.write("Description : ",
+                             df['Description'].values[j])
+                    st.write("Rating : ",
+                             df['Rating'].values[j])
+                    st.write("Price : ",
+                             df['Price'].values[j])
+                    st.write("Reviews : ",
+                             df['Reviews'].values[j])
+                    st.write("No. Of Pages : ",
+                             df['Number_Of_Pages'].values[j])
+                    j += 1
+
+    elif dep == 'Road and Transportation Engineering':
+        selected_book_name_dep = st.selectbox('', books['Book_title'].values)
+
+        bsearch = st.button('Search')
+        tk1 = 0
+        if bsearch:
+            tk1 = 1
+
+        if tk1 == 1:
+            col1, col2 = st.columns([2, 5])
+
+            id0 = df[df['Book_title'] == selected_book_name_dep].index.values[0]
+
+            with col1:
+                st.image(df['image'].values[id0],
+                         caption=selected_book_name_dep,
+                         width=198)
+
+            with col2:
+                st.write("Description : ",
+                         df['Description'].values[id0])
+                st.write("Rating : ",
+                         df['Rating'].values[id0])
+                st.write("Price : ",
+                         df['Price'].values[id0])
+                st.write("Reviews : ",
+                         df['Reviews'].values[id0])
+                st.write("No. Of Pages : ",
+                         df['Number_Of_Pages'].values[id0])
+        j = 0
+        for i in books:
+            while j < 5:
+                st.progress(100)
+                col1, col2 = st.columns([2, 5])
+                with col1:
+                    st.image(df['image'].values[j],
+                             caption=df['Book_title'].values[j],
+                             width=198)
+
+                    text_contents = '''This is some text'''
+                    st.download_button('Download', text_contents, key=j)
+
+                with col2:
+                    st.write("Description : ",
+                             df['Description'].values[j])
+                    st.write("Rating : ",
+                             df['Rating'].values[j])
+                    st.write("Price : ",
+                             df['Price'].values[j])
+                    st.write("Reviews : ",
+                             df['Reviews'].values[j])
+                    st.write("No. Of Pages : ",
+                             df['Number_Of_Pages'].values[j])
+                    j += 1
+
+    elif dep == 'Materials Engineering':
+        selected_book_name_dep = st.selectbox('', books['Book_title'].values)
+
+        bsearch = st.button('Search')
+        tk1 = 0
+        if bsearch:
+            tk1 = 1
+
+        if tk1 == 1:
+            col1, col2 = st.columns([2, 5])
+
+            id0 = df[df['Book_title'] == selected_book_name_dep].index.values[0]
+
+            with col1:
+                st.image(df['image'].values[id0],
+                         caption=selected_book_name_dep,
+                         width=198)
+
+            with col2:
+                st.write("Description : ",
+                         df['Description'].values[id0])
+                st.write("Rating : ",
+                         df['Rating'].values[id0])
+                st.write("Price : ",
+                         df['Price'].values[id0])
+                st.write("Reviews : ",
+                         df['Reviews'].values[id0])
+                st.write("No. Of Pages : ",
+                         df['Number_Of_Pages'].values[id0])
+        j = 0
+        for i in books:
+            while j < 5:
+                st.progress(100)
+                col1, col2 = st.columns([2, 5])
+                with col1:
+                    st.image(df['image'].values[j],
+                             caption=df['Book_title'].values[j],
+                             width=198)
+
+                    text_contents = '''This is some text'''
+                    st.download_button('Download', text_contents, key=j)
+
+                with col2:
+                    st.write("Description : ",
+                             df['Description'].values[j])
+                    st.write("Rating : ",
+                             df['Rating'].values[j])
+                    st.write("Price : ",
+                             df['Price'].values[j])
+                    st.write("Reviews : ",
+                             df['Reviews'].values[j])
+                    st.write("No. Of Pages : ",
+                             df['Number_Of_Pages'].values[j])
+                    j += 1
+
     elif dep == 'Water Resources Engineering':
         selected_book_name_dep = st.selectbox('', books['Book_title'].values)
 
@@ -522,24 +742,11 @@ if pages == 'كلية الهندسة':
                     st.write("No. Of Pages : ",
                              df['Number_Of_Pages'].values[j])
                     j += 1
-                    
-with st.sidebar.expander("See explanation"):
-    '\n'
-    
-    st.write("""when you select a book and click Search
-                this Webapp will show you five books 
-                like the book that you select  """)
-    '\n'
-    
-               
-
-       
-
 with st.sidebar.expander("POWERED BY"):
     st.write(""" 
                 LCT.Rana Ryad    \n                
                 Student: \n
-                Mohammed Khalid Ibrahim \n
+                | 𝐄𝐍𝐆. 𝐌𝐎𝐇𝐀𝐌𝐌𝐄𝐃 𝐊𝐇𝐀𝐋𝐈𝐃 | \n
                 ALI Anmar Borhan  \n
                  """)
     
