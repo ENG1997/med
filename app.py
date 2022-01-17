@@ -274,15 +274,31 @@ if pages == 'Search mode':
                         st.write("No. Of Pages : ",
                                  df['Number_Of_Pages'].values[i4])
                 st.progress(0)
+      
+if pages == 'Library Mode':
 
-            # with st.expander("You Can See & Download Books Here"):
-            # j = 0
-            # for i in books:
-            # while j < 271:
-            # st.image(books['image'].values[j], caption=books['Book_title'].values[j], width=250)
-            # st.success(books['Description'].values[j])
-            # j += 1
+    j = 0
+    for i in books:
+        while j < 271:
+            st.progress(100)
+            col1, col2 = st.columns([2, 5])
+            with col1:
+                st.image(df['image'].values[j],
+                         caption=df['Book_title'].values[j],
+                         width=198)
 
+            with col2:
+                st.write("Description : ",
+                         df['Description'].values[j])
+                st.write("Rating : ",
+                         df['Rating'].values[j])
+                st.write("Price : ",
+                         df['Price'].values[j])
+                st.write("Reviews : ",
+                         df['Reviews'].values[j])
+                st.write("No. Of Pages : ",
+                         df['Number_Of_Pages'].values[j])
+                j+=1
             with st.sidebar.expander("See explanation"):
                 '\n'
 
@@ -299,7 +315,6 @@ if pages == 'Search mode':
                  """)
 
 
-if pages == 'Library Mode':
-    books_types = st.selectbox('select your book type ', ['programing', 'story', 'history'])
+
 
 
