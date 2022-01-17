@@ -90,9 +90,11 @@ st.set_page_config(page_title="RAM Library", page_icon="🧊", initial_sidebar_s
                    menu_items={
                        'Get help': 'https://www.instagram.com/eng_mk97/',
                        'Report a bug': "https://www.instagram.com/eng_mk97/",
-                       'About': " https://www.instagram.com/eng_mk97 - https://www.instagram.com/ali_anmar_17/ "
+                       'About': "Project supervisor: ⠀⠀ ⠀⠀ ⠀⠀⠀ ⠀⠀ ⠀⠀ ⠀⠀ https://uomustansiriyah.edu.iq/e-learn/profile.php?id=2623 Implementation and design:⠀⠀⠀⠀⠀ ⠀https://www.instagram.com/eng_mk97 ⠀https://www.instagram.com/ali_anmar_17/"
                    }
                    )
+
+
 
 st.title("R-M-A Book Recommendation ")
 df = pd.read_csv('prog_book.csv')
