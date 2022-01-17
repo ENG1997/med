@@ -303,20 +303,27 @@ if pages == 'Library Mode':
                 st.write("No. Of Pages : ",
                          df['Number_Of_Pages'].values[j])
                 j+=1
-            with st.sidebar.expander("See explanation"):
-                '\n'
-
-                st.write("""when you select a book and click Search
+with st.sidebar.expander("See explanation"):
+    '\n'
+    
+    st.write("""when you select a book and click Search
                 this Webapp will show you five books 
                 like the book that you select  """)
+    '\n'
+    
+               
 
-            with st.sidebar.expander("POWERED BY"):
-                st.write(""" 
+       
+
+with st.sidebar.expander("POWERED BY"):
+    st.write(""" 
                 LCT.Rana Ryad    \n                
                 Student: \n
                 Mohammed Khalid Ibrahim \n
                 ALI Anmar Borhan  \n
                  """)
+    
+                
 
 
 
