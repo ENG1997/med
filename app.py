@@ -176,7 +176,7 @@ if pages == 'All Books':
 
             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
             st.write("Rating :       ", rate)
-            st.write("Price :        ", df['Price'].values[i0])
+            st.write("Price :        $", df['Price'].values[i0])
             st.write("Reviews :      ", df['Reviews'].values[i0])
             st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i0])
 
@@ -216,7 +216,7 @@ if pages == 'All Books':
 
                         st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
                         st.write("Rating :             ", rate1)
-                        st.write("Price :              ", df['Price'].values[i1])
+                        st.write("Price :              $", df['Price'].values[i1])
                         st.write("Reviews :            ", df['Reviews'].values[i1])
                         st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i1])
                         '\n'
@@ -245,7 +245,7 @@ if pages == 'All Books':
 
                         st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
                         st.write("Rating :", rate2)
-                        st.write("Price :           ", df['Price'].values[i2])
+                        st.write("Price :           $", df['Price'].values[i2])
                         st.write("Reviews :         ", df['Reviews'].values[i2])
                         st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i2])
                         '\n'
@@ -273,7 +273,7 @@ if pages == 'All Books':
 
                         st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
                         st.write("Rating :          ", rate3)
-                        st.write("Price :           ", df['Price'].values[i3])
+                        st.write("Price :           $", df['Price'].values[i3])
                         st.write("Reviews :         ", df['Reviews'].values[i3])
                         st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i3])
                         '\n'
@@ -301,7 +301,7 @@ if pages == 'All Books':
 
                         st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
                         st.write("Rating : ", rate4)
-                        st.write("Price : ", df['Price'].values[i4])
+                        st.write("Price : $", df['Price'].values[i4])
                         st.write("Reviews : ", df['Reviews'].values[i4])
                         st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i4])
                         '\n'
@@ -328,7 +328,7 @@ if pages == 'All Books':
                             rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                         st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                         st.write("Rating :             ", rate5)
-                        st.write("Price :              ", df['Price'].values[i5])
+                        st.write("Price :              $", df['Price'].values[i5])
                         st.write("Reviews :            ", df['Reviews'].values[i5])
                         st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i5])
                         '\n'
@@ -381,7 +381,7 @@ if pages == 'Collage of Engineering':
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
                 st.write("Rating :       ", rate)
-                st.write("Price :        ", df['Price'].values[i0])
+                st.write("Price :        $", df['Price'].values[i0])
                 st.write("Reviews :      ", df['Reviews'].values[i0])
                 st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i0])
 
@@ -419,7 +419,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
                             st.write("Rating :             ", rate1)
-                            st.write("Price :              ", df['Price'].values[i1])
+                            st.write("Price :              $", df['Price'].values[i1])
                             st.write("Reviews :            ", df['Reviews'].values[i1])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i1])
                             '\n'
@@ -447,7 +447,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
                             st.write("Rating :          ", rate2)
-                            st.write("Price :           ", df['Price'].values[i2])
+                            st.write("Price :           $", df['Price'].values[i2])
                             st.write("Reviews :         ", df['Reviews'].values[i2])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i2])
                             '\n'
@@ -475,7 +475,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
                             st.write("Rating :          ", rate3)
-                            st.write("Price :           ", df['Price'].values[i3])
+                            st.write("Price :           $", df['Price'].values[i3])
                             st.write("Reviews :         ", df['Reviews'].values[i3])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i3])
                             '\n'
@@ -503,7 +503,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
                             st.write("Rating : ", rate4)
-                            st.write("Price : ", df['Price'].values[i4])
+                            st.write("Price : $", df['Price'].values[i4])
                             st.write("Reviews : ", df['Reviews'].values[i4])
                             st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i4])
                             '\n'
@@ -530,7 +530,7 @@ if pages == 'Collage of Engineering':
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
-                            st.write("Price :              ", df['Price'].values[i5])
+                            st.write("Price :              $", df['Price'].values[i5])
                             st.write("Reviews :            ", df['Reviews'].values[i5])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i5])
                             '\n'
@@ -572,7 +572,7 @@ if pages == 'Collage of Engineering':
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
                 st.write("Rating :       ", rate)
-                st.write("Price :        ", df['Price'].values[i0])
+                st.write("Price :        $", df['Price'].values[i0])
                 st.write("Reviews :      ", df['Reviews'].values[i0])
                 st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i0])
 
@@ -610,7 +610,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
                             st.write("Rating :             ", rate1)
-                            st.write("Price :              ", df['Price'].values[i1])
+                            st.write("Price :              $", df['Price'].values[i1])
                             st.write("Reviews :            ", df['Reviews'].values[i1])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i1])
                             '\n'
@@ -638,7 +638,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
                             st.write("Rating :          ", rate2)
-                            st.write("Price :           ", df['Price'].values[i2])
+                            st.write("Price :           $", df['Price'].values[i2])
                             st.write("Reviews :         ", df['Reviews'].values[i2])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i2])
                             '\n'
@@ -666,7 +666,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
                             st.write("Rating :          ", rate3)
-                            st.write("Price :           ", df['Price'].values[i3])
+                            st.write("Price :           $", df['Price'].values[i3])
                             st.write("Reviews :         ", df['Reviews'].values[i3])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i3])
                             '\n'
@@ -694,7 +694,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
                             st.write("Rating : ", rate4)
-                            st.write("Price : ", df['Price'].values[i4])
+                            st.write("Price : $", df['Price'].values[i4])
                             st.write("Reviews : ", df['Reviews'].values[i4])
                             st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i4])
                             '\n'
@@ -721,7 +721,7 @@ if pages == 'Collage of Engineering':
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
-                            st.write("Price :              ", df['Price'].values[i5])
+                            st.write("Price :              $", df['Price'].values[i5])
                             st.write("Reviews :            ", df['Reviews'].values[i5])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i5])
                             '\n'
@@ -763,7 +763,7 @@ if pages == 'Collage of Engineering':
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
                 st.write("Rating :       ", rate)
-                st.write("Price :        ", df['Price'].values[i0])
+                st.write("Price :        $", df['Price'].values[i0])
                 st.write("Reviews :      ", df['Reviews'].values[i0])
                 st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i0])
 
@@ -801,7 +801,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
                             st.write("Rating :             ", rate1)
-                            st.write("Price :              ", df['Price'].values[i1])
+                            st.write("Price :              $", df['Price'].values[i1])
                             st.write("Reviews :            ", df['Reviews'].values[i1])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i1])
                             '\n'
@@ -829,7 +829,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
                             st.write("Rating :          ", rate2)
-                            st.write("Price :           ", df['Price'].values[i2])
+                            st.write("Price :           $", df['Price'].values[i2])
                             st.write("Reviews :         ", df['Reviews'].values[i2])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i2])
                             '\n'
@@ -857,7 +857,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
                             st.write("Rating :          ", rate3)
-                            st.write("Price :           ", df['Price'].values[i3])
+                            st.write("Price :           $", df['Price'].values[i3])
                             st.write("Reviews :         ", df['Reviews'].values[i3])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i3])
                             '\n'
@@ -885,7 +885,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
                             st.write("Rating : ", rate4)
-                            st.write("Price : ", df['Price'].values[i4])
+                            st.write("Price : $", df['Price'].values[i4])
                             st.write("Reviews : ", df['Reviews'].values[i4])
                             st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i4])
                             '\n'
@@ -912,7 +912,7 @@ if pages == 'Collage of Engineering':
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
-                            st.write("Price :              ", df['Price'].values[i5])
+                            st.write("Price :              $", df['Price'].values[i5])
                             st.write("Reviews :            ", df['Reviews'].values[i5])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i5])
                             '\n'
@@ -954,7 +954,7 @@ if pages == 'Collage of Engineering':
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
                 st.write("Rating :       ", rate)
-                st.write("Price :        ", df['Price'].values[i0])
+                st.write("Price :        $", df['Price'].values[i0])
                 st.write("Reviews :      ", df['Reviews'].values[i0])
                 st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i0])
 
@@ -992,7 +992,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
                             st.write("Rating :             ", rate1)
-                            st.write("Price :              ", df['Price'].values[i1])
+                            st.write("Price :              $", df['Price'].values[i1])
                             st.write("Reviews :            ", df['Reviews'].values[i1])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i1])
                             '\n'
@@ -1020,7 +1020,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
                             st.write("Rating :          ", rate2)
-                            st.write("Price :           ", df['Price'].values[i2])
+                            st.write("Price :           $", df['Price'].values[i2])
                             st.write("Reviews :         ", df['Reviews'].values[i2])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i2])
                             '\n'
@@ -1048,7 +1048,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
                             st.write("Rating :          ", rate3)
-                            st.write("Price :           ", df['Price'].values[i3])
+                            st.write("Price :           $", df['Price'].values[i3])
                             st.write("Reviews :         ", df['Reviews'].values[i3])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i3])
                             '\n'
@@ -1076,7 +1076,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
                             st.write("Rating : ", rate4)
-                            st.write("Price : ", df['Price'].values[i4])
+                            st.write("Price : $", df['Price'].values[i4])
                             st.write("Reviews : ", df['Reviews'].values[i4])
                             st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i4])
                             '\n'
@@ -1103,7 +1103,7 @@ if pages == 'Collage of Engineering':
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
-                            st.write("Price :              ", df['Price'].values[i5])
+                            st.write("Price :              $", df['Price'].values[i5])
                             st.write("Reviews :            ", df['Reviews'].values[i5])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i5])
                             '\n'
@@ -1145,7 +1145,7 @@ if pages == 'Collage of Engineering':
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
                 st.write("Rating :       ", rate)
-                st.write("Price :        ", df['Price'].values[i0])
+                st.write("Price :        $", df['Price'].values[i0])
                 st.write("Reviews :      ", df['Reviews'].values[i0])
                 st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i0])
 
@@ -1183,7 +1183,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
                             st.write("Rating :             ", rate1)
-                            st.write("Price :              ", df['Price'].values[i1])
+                            st.write("Price :              $", df['Price'].values[i1])
                             st.write("Reviews :            ", df['Reviews'].values[i1])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i1])
                             '\n'
@@ -1211,7 +1211,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
                             st.write("Rating :          ", rate2)
-                            st.write("Price :           ", df['Price'].values[i2])
+                            st.write("Price :           $", df['Price'].values[i2])
                             st.write("Reviews :         ", df['Reviews'].values[i2])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i2])
                             '\n'
@@ -1239,7 +1239,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
                             st.write("Rating :          ", rate3)
-                            st.write("Price :           ", df['Price'].values[i3])
+                            st.write("Price :          $", df['Price'].values[i3])
                             st.write("Reviews :         ", df['Reviews'].values[i3])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i3])
                             '\n'
@@ -1267,7 +1267,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
                             st.write("Rating : ", rate4)
-                            st.write("Price : ", df['Price'].values[i4])
+                            st.write("Price : $", df['Price'].values[i4])
                             st.write("Reviews : ", df['Reviews'].values[i4])
                             st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i4])
                             '\n'
@@ -1294,7 +1294,7 @@ if pages == 'Collage of Engineering':
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
-                            st.write("Price :              ", df['Price'].values[i5])
+                            st.write("Price :              $", df['Price'].values[i5])
                             st.write("Reviews :            ", df['Reviews'].values[i5])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i5])
                             '\n'
@@ -1336,7 +1336,7 @@ if pages == 'Collage of Engineering':
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
                 st.write("Rating :       ", rate)
-                st.write("Price :        ", df['Price'].values[i0])
+                st.write("Price :        $", df['Price'].values[i0])
                 st.write("Reviews :      ", df['Reviews'].values[i0])
                 st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i0])
 
@@ -1374,7 +1374,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
                             st.write("Rating :             ", rate1)
-                            st.write("Price :              ", df['Price'].values[i1])
+                            st.write("Price :              $", df['Price'].values[i1])
                             st.write("Reviews :            ", df['Reviews'].values[i1])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i1])
                             '\n'
@@ -1402,7 +1402,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
                             st.write("Rating :          ", rate2)
-                            st.write("Price :           ", df['Price'].values[i2])
+                            st.write("Price :           $", df['Price'].values[i2])
                             st.write("Reviews :         ", df['Reviews'].values[i2])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i2])
                             '\n'
@@ -1430,7 +1430,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
                             st.write("Rating :          ", rate3)
-                            st.write("Price :           ", df['Price'].values[i3])
+                            st.write("Price :           $", df['Price'].values[i3])
                             st.write("Reviews :         ", df['Reviews'].values[i3])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i3])
                             '\n'
@@ -1458,7 +1458,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
                             st.write("Rating : ", rate4)
-                            st.write("Price : ", df['Price'].values[i4])
+                            st.write("Price : $", df['Price'].values[i4])
                             st.write("Reviews : ", df['Reviews'].values[i4])
                             st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i4])
                             '\n'
@@ -1485,7 +1485,7 @@ if pages == 'Collage of Engineering':
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
-                            st.write("Price :              ", df['Price'].values[i5])
+                            st.write("Price :              $", df['Price'].values[i5])
                             st.write("Reviews :            ", df['Reviews'].values[i5])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i5])
                             '\n'
@@ -1527,7 +1527,7 @@ if pages == 'Collage of Engineering':
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
                 st.write("Rating :       ", rate)
-                st.write("Price :        ", df['Price'].values[i0])
+                st.write("Price :        $", df['Price'].values[i0])
                 st.write("Reviews :      ", df['Reviews'].values[i0])
                 st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i0])
 
@@ -1565,7 +1565,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
                             st.write("Rating :             ", rate1)
-                            st.write("Price :              ", df['Price'].values[i1])
+                            st.write("Price :              $", df['Price'].values[i1])
                             st.write("Reviews :            ", df['Reviews'].values[i1])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i1])
                             '\n'
@@ -1593,7 +1593,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
                             st.write("Rating :          ", rate2)
-                            st.write("Price :           ", df['Price'].values[i2])
+                            st.write("Price :           $", df['Price'].values[i2])
                             st.write("Reviews :         ", df['Reviews'].values[i2])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i2])
                             '\n'
@@ -1621,7 +1621,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
                             st.write("Rating :          ", rate3)
-                            st.write("Price :           ", df['Price'].values[i3])
+                            st.write("Price :           $", df['Price'].values[i3])
                             st.write("Reviews :         ", df['Reviews'].values[i3])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i3])
                             '\n'
@@ -1649,7 +1649,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
                             st.write("Rating : ", rate4)
-                            st.write("Price : ", df['Price'].values[i4])
+                            st.write("Price : $", df['Price'].values[i4])
                             st.write("Reviews : ", df['Reviews'].values[i4])
                             st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i4])
                             '\n'
@@ -1676,7 +1676,7 @@ if pages == 'Collage of Engineering':
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
-                            st.write("Price :              ", df['Price'].values[i5])
+                            st.write("Price :              $", df['Price'].values[i5])
                             st.write("Reviews :            ", df['Reviews'].values[i5])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i5])
                             '\n'
@@ -1718,7 +1718,7 @@ if pages == 'Collage of Engineering':
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
                 st.write("Rating :       ", rate)
-                st.write("Price :        ", df['Price'].values[i0])
+                st.write("Price :        $", df['Price'].values[i0])
                 st.write("Reviews :      ", df['Reviews'].values[i0])
                 st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i0])
 
@@ -1756,7 +1756,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
                             st.write("Rating :             ", rate1)
-                            st.write("Price :              ", df['Price'].values[i1])
+                            st.write("Price :              $", df['Price'].values[i1])
                             st.write("Reviews :            ", df['Reviews'].values[i1])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i1])
                             '\n'
@@ -1784,7 +1784,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
                             st.write("Rating :          ", rate2)
-                            st.write("Price :           ", df['Price'].values[i2])
+                            st.write("Price :           $", df['Price'].values[i2])
                             st.write("Reviews :         ", df['Reviews'].values[i2])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i2])
                             '\n'
@@ -1812,7 +1812,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
                             st.write("Rating :          ", rate3)
-                            st.write("Price :           ", df['Price'].values[i3])
+                            st.write("Price :           $", df['Price'].values[i3])
                             st.write("Reviews :         ", df['Reviews'].values[i3])
                             st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i3])
                             '\n'
@@ -1840,7 +1840,7 @@ if pages == 'Collage of Engineering':
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
                             st.write("Rating : ", rate4)
-                            st.write("Price : ", df['Price'].values[i4])
+                            st.write("Price : $", df['Price'].values[i4])
                             st.write("Reviews : ", df['Reviews'].values[i4])
                             st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i4])
                             '\n'
@@ -1867,7 +1867,7 @@ if pages == 'Collage of Engineering':
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
-                            st.write("Price :              ", df['Price'].values[i5])
+                            st.write("Price :              $", df['Price'].values[i5])
                             st.write("Reviews :            ", df['Reviews'].values[i5])
                             st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i5])
                             '\n'
