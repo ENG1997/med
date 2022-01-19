@@ -142,8 +142,6 @@ if pages == 'All Books':
             tk = 1
     if tk == 1:
         import time
-
-
         with st.spinner('Wait, Please...🧐'):
             time.sleep(3)
         my_bar = st.progress(0)
@@ -151,7 +149,6 @@ if pages == 'All Books':
         for x in range(100):
             time.sleep(0.01)
         my_bar.progress(x + 1)
-
 
     if tk == 1:
         col1, col2 = st.columns([2.2, 5])
@@ -166,15 +163,15 @@ if pages == 'All Books':
 
         with col2:
 
-            if 1 < df['Rating'].values[i0] < 2:
+            if 1 <= df['Rating'].values[i0] < 2:
                 rate = '⭐️'
-            elif 2 < df['Rating'].values[i0] < 3:
+            elif 2 <= df['Rating'].values[i0] < 3:
                 rate = '⭐️ ⭐️ ️'
-            elif 3 < df['Rating'].values[i0] < 4:
+            elif 3 <= df['Rating'].values[i0] < 4:
                 rate = '⭐️ ⭐️ ⭐️ ️'
-            elif 4 < df['Rating'].values[i0] < 5:
+            elif 4 <= df['Rating'].values[i0] < 5:
                 rate = '⭐️ ⭐️ ⭐️ ⭐️'
-            elif 5 < df['Rating'].values[i0] < 6:
+            elif 5 <= df['Rating'].values[i0] < 6:
                 rate = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
@@ -219,7 +216,7 @@ if pages == 'All Books':
 
                         st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
                         st.write("Rating :             ", rate1)
-                        st.write("Price :              ",  df['Price'].values[i1])
+                        st.write("Price :              ", df['Price'].values[i1])
                         st.write("Reviews :            ", df['Reviews'].values[i1])
                         st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i1])
                         '\n'
@@ -234,19 +231,20 @@ if pages == 'All Books':
                                  width=170)
 
                     with col2:
-                        if 1 < df['Rating'].values[i2] < 2:
+
+                        if 1 <= df['Rating'].values[i2] < 2:
                             rate2 = '⭐️'
-                        elif 2 < df['Rating'].values[i2] < 3:
+                        elif 2 <= df['Rating'].values[i2] < 3:
                             rate2 = '⭐️ ⭐️ ️'
-                        elif 3 < df['Rating'].values[i2] < 4:
+                        elif 3 <= df['Rating'].values[i2] < 4:
                             rate2 = '⭐️ ⭐️ ⭐️ ️'
-                        elif 4 < df['Rating'].values[i2] < 5:
+                        elif 4 <= df['Rating'].values[i2] < 5:
                             rate2 = '⭐️ ⭐️ ⭐️ ⭐️'
-                        elif 5 < df['Rating'].values[i2] < 6:
+                        elif 5 <= df['Rating'].values[i2] < 6:
                             rate2 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                         st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
-                        st.write("Rating :          ", rate2)
+                        st.write("Rating :", rate2)
                         st.write("Price :           ", df['Price'].values[i2])
                         st.write("Reviews :         ", df['Reviews'].values[i2])
                         st.write("No. Of Pages :    ", df['Number_Of_Pages'].values[i2])
@@ -262,15 +260,15 @@ if pages == 'All Books':
                                  width=170)
 
                     with col2:
-                        if 1 < df['Rating'].values[i3] < 2:
+                        if 1 <= df['Rating'].values[i3] < 2:
                             rate3 = '⭐️'
-                        elif 2 < df['Rating'].values[i3] < 3:
+                        elif 2 <= df['Rating'].values[i3] < 3:
                             rate3 = '⭐️ ⭐️ ️'
-                        elif 3 < df['Rating'].values[i3] < 4:
+                        elif 3 <= df['Rating'].values[i3] < 4:
                             rate3 = '⭐️ ⭐️ ⭐️ ️'
-                        elif 4 < df['Rating'].values[i3] < 5:
+                        elif 4 <= df['Rating'].values[i3] < 5:
                             rate3 = '⭐️ ⭐️ ⭐️ ⭐️'
-                        elif 5 < df['Rating'].values[i3] < 6:
+                        elif 5 <= df['Rating'].values[i3] < 6:
                             rate3 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                         st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
@@ -290,15 +288,15 @@ if pages == 'All Books':
                                  width=170)
 
                     with col2:
-                        if 1 < df['Rating'].values[i4] < 2:
+                        if 1 <= df['Rating'].values[i4] < 2:
                             rate4 = '⭐️'
-                        elif 2 < df['Rating'].values[i4] < 3:
+                        elif 2 <= df['Rating'].values[i4] < 3:
                             rate4 = '⭐️ ⭐️ ️'
-                        elif 3 < df['Rating'].values[i4] < 4:
+                        elif 3 <= df['Rating'].values[i4] < 4:
                             rate4 = '⭐️ ⭐️ ⭐️ ️'
-                        elif 4 < df['Rating'].values[i4] < 5:
+                        elif 4 <= df['Rating'].values[i4] < 5:
                             rate4 = '⭐️ ⭐️ ⭐️ ⭐️'
-                        elif 5 < df['Rating'].values[i4] < 6:
+                        elif 5 <= df['Rating'].values[i4] < 6:
                             rate4 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                         st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
@@ -318,15 +316,15 @@ if pages == 'All Books':
                                  width=170)
 
                     with col2:
-                        if 1 < df['Rating'].values[i5] < 2:
+                        if 1 <= df['Rating'].values[i5] < 2:
                             rate5 = '⭐️'
-                        elif 2 < df['Rating'].values[i5] < 3:
+                        elif 2 <= df['Rating'].values[i5] < 3:
                             rate5 = '⭐️ ⭐️ ️'
-                        elif 3 < df['Rating'].values[i5] < 4:
+                        elif 3 <= df['Rating'].values[i5] < 4:
                             rate5 = '⭐️ ⭐️ ⭐️ ️'
-                        elif 4 < df['Rating'].values[i5] < 5:
+                        elif 4 <= df['Rating'].values[i5] < 5:
                             rate5 = '⭐️ ⭐️ ⭐️ ⭐️'
-                        elif 5 < df['Rating'].values[i5] < 6:
+                        elif 5 <= df['Rating'].values[i5] < 6:
                             rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                         st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                         st.write("Rating :             ", rate5)
@@ -370,15 +368,15 @@ if pages == 'Collage of Engineering':
                          width=198)
 
             with col2:
-                if 1 < df['Rating'].values[i0] < 2:
+                if 1 <= df['Rating'].values[i0] < 2:
                     rate = '⭐️'
-                elif 2 < df['Rating'].values[i0] < 3:
+                elif 2 <= df['Rating'].values[i0] < 3:
                     rate = '⭐️ ⭐️ ️'
-                elif 3 < df['Rating'].values[i0] < 4:
+                elif 3 <= df['Rating'].values[i0] < 4:
                     rate = '⭐️ ⭐️ ⭐️ ️'
-                elif 4 < df['Rating'].values[i0] < 5:
+                elif 4 <= df['Rating'].values[i0] < 5:
                     rate = '⭐️ ⭐️ ⭐️ ⭐️'
-                elif 5 < df['Rating'].values[i0] < 6:
+                elif 5 <= df['Rating'].values[i0] < 6:
                     rate = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
@@ -408,15 +406,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i1] < 2:
+                            if 1 <= df['Rating'].values[i1] < 2:
                                 rate1 = '⭐️'
-                            elif 2 < df['Rating'].values[i1] < 3:
+                            elif 2 <= df['Rating'].values[i1] < 3:
                                 rate1 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i1] < 4:
+                            elif 3 <= df['Rating'].values[i1] < 4:
                                 rate1 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i1] < 5:
+                            elif 4 <= df['Rating'].values[i1] < 5:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i1] < 6:
+                            elif 5 <= df['Rating'].values[i1] < 6:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
@@ -436,15 +434,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i2] < 2:
+                            if 1 <= df['Rating'].values[i2] < 2:
                                 rate2 = '⭐️'
-                            elif 2 < df['Rating'].values[i2] < 3:
+                            elif 2 <= df['Rating'].values[i2] < 3:
                                 rate2 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i2] < 4:
+                            elif 3 <= df['Rating'].values[i2] < 4:
                                 rate2 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i2] < 5:
+                            elif 4 <= df['Rating'].values[i2] < 5:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i2] < 6:
+                            elif 5 <= df['Rating'].values[i2] < 6:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
@@ -464,15 +462,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i3] < 2:
+                            if 1 <= df['Rating'].values[i3] < 2:
                                 rate3 = '⭐️'
-                            elif 2 < df['Rating'].values[i3] < 3:
+                            elif 2 <= df['Rating'].values[i3] < 3:
                                 rate3 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i3] < 4:
+                            elif 3 <= df['Rating'].values[i3] < 4:
                                 rate3 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i3] < 5:
+                            elif 4 <= df['Rating'].values[i3] < 5:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i3] < 6:
+                            elif 5 <= df['Rating'].values[i3] < 6:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
@@ -492,15 +490,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i4] < 2:
+                            if 1 <= df['Rating'].values[i4] < 2:
                                 rate4 = '⭐️'
-                            elif 2 < df['Rating'].values[i4] < 3:
+                            elif 2 <= df['Rating'].values[i4] < 3:
                                 rate4 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i4] < 4:
+                            elif 3 <= df['Rating'].values[i4] < 4:
                                 rate4 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i4] < 5:
+                            elif 4 <= df['Rating'].values[i4] < 5:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i4] < 6:
+                            elif 5 <= df['Rating'].values[i4] < 6:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
@@ -520,15 +518,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i5] < 2:
+                            if 1 <= df['Rating'].values[i5] < 2:
                                 rate5 = '⭐️'
-                            elif 2 < df['Rating'].values[i5] < 3:
+                            elif 2 <= df['Rating'].values[i5] < 3:
                                 rate5 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i5] < 4:
+                            elif 3 <= df['Rating'].values[i5] < 4:
                                 rate5 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i5] < 5:
+                            elif 4 <= df['Rating'].values[i5] < 5:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i5] < 6:
+                            elif 5 <= df['Rating'].values[i5] < 6:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
@@ -561,15 +559,15 @@ if pages == 'Collage of Engineering':
                          width=198)
 
             with col2:
-                if 1 < df['Rating'].values[i0] < 2:
+                if 1 <= df['Rating'].values[i0] < 2:
                     rate = '⭐️'
-                elif 2 < df['Rating'].values[i0] < 3:
+                elif 2 <= df['Rating'].values[i0] < 3:
                     rate = '⭐️ ⭐️ ️'
-                elif 3 < df['Rating'].values[i0] < 4:
+                elif 3 <= df['Rating'].values[i0] < 4:
                     rate = '⭐️ ⭐️ ⭐️ ️'
-                elif 4 < df['Rating'].values[i0] < 5:
+                elif 4 <= df['Rating'].values[i0] < 5:
                     rate = '⭐️ ⭐️ ⭐️ ⭐️'
-                elif 5 < df['Rating'].values[i0] < 6:
+                elif 5 <= df['Rating'].values[i0] < 6:
                     rate = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
@@ -599,15 +597,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i1] < 2:
+                            if 1 <= df['Rating'].values[i1] < 2:
                                 rate1 = '⭐️'
-                            elif 2 < df['Rating'].values[i1] < 3:
+                            elif 2 <= df['Rating'].values[i1] < 3:
                                 rate1 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i1] < 4:
+                            elif 3 <= df['Rating'].values[i1] < 4:
                                 rate1 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i1] < 5:
+                            elif 4 <= df['Rating'].values[i1] < 5:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i1] < 6:
+                            elif 5 <= df['Rating'].values[i1] < 6:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
@@ -627,15 +625,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i2] < 2:
+                            if 1 <= df['Rating'].values[i2] < 2:
                                 rate2 = '⭐️'
-                            elif 2 < df['Rating'].values[i2] < 3:
+                            elif 2 <= df['Rating'].values[i2] < 3:
                                 rate2 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i2] < 4:
+                            elif 3 <= df['Rating'].values[i2] < 4:
                                 rate2 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i2] < 5:
+                            elif 4 <= df['Rating'].values[i2] < 5:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i2] < 6:
+                            elif 5 <= df['Rating'].values[i2] < 6:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
@@ -655,15 +653,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i3] < 2:
+                            if 1 <= df['Rating'].values[i3] < 2:
                                 rate3 = '⭐️'
-                            elif 2 < df['Rating'].values[i3] < 3:
+                            elif 2 <= df['Rating'].values[i3] < 3:
                                 rate3 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i3] < 4:
+                            elif 3 <= df['Rating'].values[i3] < 4:
                                 rate3 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i3] < 5:
+                            elif 4 <= df['Rating'].values[i3] < 5:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i3] < 6:
+                            elif 5 <= df['Rating'].values[i3] < 6:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
@@ -683,15 +681,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i4] < 2:
+                            if 1 <= df['Rating'].values[i4] < 2:
                                 rate4 = '⭐️'
-                            elif 2 < df['Rating'].values[i4] < 3:
+                            elif 2 <= df['Rating'].values[i4] < 3:
                                 rate4 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i4] < 4:
+                            elif 3 <= df['Rating'].values[i4] < 4:
                                 rate4 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i4] < 5:
+                            elif 4 <= df['Rating'].values[i4] < 5:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i4] < 6:
+                            elif 5 <= df['Rating'].values[i4] < 6:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
@@ -711,15 +709,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i5] < 2:
+                            if 1 <= df['Rating'].values[i5] < 2:
                                 rate5 = '⭐️'
-                            elif 2 < df['Rating'].values[i5] < 3:
+                            elif 2 <= df['Rating'].values[i5] < 3:
                                 rate5 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i5] < 4:
+                            elif 3 <= df['Rating'].values[i5] < 4:
                                 rate5 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i5] < 5:
+                            elif 4 <= df['Rating'].values[i5] < 5:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i5] < 6:
+                            elif 5 <= df['Rating'].values[i5] < 6:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
@@ -752,15 +750,15 @@ if pages == 'Collage of Engineering':
                          width=198)
 
             with col2:
-                if 1 < df['Rating'].values[i0] < 2:
+                if 1 <= df['Rating'].values[i0] < 2:
                     rate = '⭐️'
-                elif 2 < df['Rating'].values[i0] < 3:
+                elif 2 <= df['Rating'].values[i0] < 3:
                     rate = '⭐️ ⭐️ ️'
-                elif 3 < df['Rating'].values[i0] < 4:
+                elif 3 <= df['Rating'].values[i0] < 4:
                     rate = '⭐️ ⭐️ ⭐️ ️'
-                elif 4 < df['Rating'].values[i0] < 5:
+                elif 4 <= df['Rating'].values[i0] < 5:
                     rate = '⭐️ ⭐️ ⭐️ ⭐️'
-                elif 5 < df['Rating'].values[i0] < 6:
+                elif 5 <= df['Rating'].values[i0] < 6:
                     rate = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
@@ -790,15 +788,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i1] < 2:
+                            if 1 <= df['Rating'].values[i1] < 2:
                                 rate1 = '⭐️'
-                            elif 2 < df['Rating'].values[i1] < 3:
+                            elif 2 <= df['Rating'].values[i1] < 3:
                                 rate1 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i1] < 4:
+                            elif 3 <= df['Rating'].values[i1] < 4:
                                 rate1 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i1] < 5:
+                            elif 4 <= df['Rating'].values[i1] < 5:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i1] < 6:
+                            elif 5 <= df['Rating'].values[i1] < 6:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
@@ -818,15 +816,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i2] < 2:
+                            if 1 <= df['Rating'].values[i2] < 2:
                                 rate2 = '⭐️'
-                            elif 2 < df['Rating'].values[i2] < 3:
+                            elif 2 <= df['Rating'].values[i2] < 3:
                                 rate2 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i2] < 4:
+                            elif 3 <= df['Rating'].values[i2] < 4:
                                 rate2 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i2] < 5:
+                            elif 4 <= df['Rating'].values[i2] < 5:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i2] < 6:
+                            elif 5 <= df['Rating'].values[i2] < 6:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
@@ -846,15 +844,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i3] < 2:
+                            if 1 <= df['Rating'].values[i3] < 2:
                                 rate3 = '⭐️'
-                            elif 2 < df['Rating'].values[i3] < 3:
+                            elif 2 <= df['Rating'].values[i3] < 3:
                                 rate3 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i3] < 4:
+                            elif 3 <= df['Rating'].values[i3] < 4:
                                 rate3 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i3] < 5:
+                            elif 4 <= df['Rating'].values[i3] < 5:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i3] < 6:
+                            elif 5 <= df['Rating'].values[i3] < 6:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
@@ -874,15 +872,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i4] < 2:
+                            if 1 <= df['Rating'].values[i4] < 2:
                                 rate4 = '⭐️'
-                            elif 2 < df['Rating'].values[i4] < 3:
+                            elif 2 <= df['Rating'].values[i4] < 3:
                                 rate4 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i4] < 4:
+                            elif 3 <= df['Rating'].values[i4] < 4:
                                 rate4 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i4] < 5:
+                            elif 4 <= df['Rating'].values[i4] < 5:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i4] < 6:
+                            elif 5 <= df['Rating'].values[i4] < 6:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
@@ -902,15 +900,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i5] < 2:
+                            if 1 <= df['Rating'].values[i5] < 2:
                                 rate5 = '⭐️'
-                            elif 2 < df['Rating'].values[i5] < 3:
+                            elif 2 <= df['Rating'].values[i5] < 3:
                                 rate5 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i5] < 4:
+                            elif 3 <= df['Rating'].values[i5] < 4:
                                 rate5 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i5] < 5:
+                            elif 4 <= df['Rating'].values[i5] < 5:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i5] < 6:
+                            elif 5 <= df['Rating'].values[i5] < 6:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
@@ -943,15 +941,15 @@ if pages == 'Collage of Engineering':
                          width=198)
 
             with col2:
-                if 1 < df['Rating'].values[i0] < 2:
+                if 1 <= df['Rating'].values[i0] < 2:
                     rate = '⭐️'
-                elif 2 < df['Rating'].values[i0] < 3:
+                elif 2 <= df['Rating'].values[i0] < 3:
                     rate = '⭐️ ⭐️ ️'
-                elif 3 < df['Rating'].values[i0] < 4:
+                elif 3 <= df['Rating'].values[i0] < 4:
                     rate = '⭐️ ⭐️ ⭐️ ️'
-                elif 4 < df['Rating'].values[i0] < 5:
+                elif 4 <= df['Rating'].values[i0] < 5:
                     rate = '⭐️ ⭐️ ⭐️ ⭐️'
-                elif 5 < df['Rating'].values[i0] < 6:
+                elif 5 <= df['Rating'].values[i0] < 6:
                     rate = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
@@ -981,15 +979,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i1] < 2:
+                            if 1 <= df['Rating'].values[i1] < 2:
                                 rate1 = '⭐️'
-                            elif 2 < df['Rating'].values[i1] < 3:
+                            elif 2 <= df['Rating'].values[i1] < 3:
                                 rate1 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i1] < 4:
+                            elif 3 <= df['Rating'].values[i1] < 4:
                                 rate1 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i1] < 5:
+                            elif 4 <= df['Rating'].values[i1] < 5:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i1] < 6:
+                            elif 5 <= df['Rating'].values[i1] < 6:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
@@ -1009,15 +1007,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i2] < 2:
+                            if 1 <= df['Rating'].values[i2] < 2:
                                 rate2 = '⭐️'
-                            elif 2 < df['Rating'].values[i2] < 3:
+                            elif 2 <= df['Rating'].values[i2] < 3:
                                 rate2 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i2] < 4:
+                            elif 3 <= df['Rating'].values[i2] < 4:
                                 rate2 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i2] < 5:
+                            elif 4 <= df['Rating'].values[i2] < 5:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i2] < 6:
+                            elif 5 <= df['Rating'].values[i2] < 6:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
@@ -1037,15 +1035,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i3] < 2:
+                            if 1 <= df['Rating'].values[i3] < 2:
                                 rate3 = '⭐️'
-                            elif 2 < df['Rating'].values[i3] < 3:
+                            elif 2 <= df['Rating'].values[i3] < 3:
                                 rate3 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i3] < 4:
+                            elif 3 <= df['Rating'].values[i3] < 4:
                                 rate3 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i3] < 5:
+                            elif 4 <= df['Rating'].values[i3] < 5:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i3] < 6:
+                            elif 5 <= df['Rating'].values[i3] < 6:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
@@ -1065,15 +1063,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i4] < 2:
+                            if 1 <= df['Rating'].values[i4] < 2:
                                 rate4 = '⭐️'
-                            elif 2 < df['Rating'].values[i4] < 3:
+                            elif 2 <= df['Rating'].values[i4] < 3:
                                 rate4 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i4] < 4:
+                            elif 3 <= df['Rating'].values[i4] < 4:
                                 rate4 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i4] < 5:
+                            elif 4 <= df['Rating'].values[i4] < 5:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i4] < 6:
+                            elif 5 <= df['Rating'].values[i4] < 6:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
@@ -1093,15 +1091,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i5] < 2:
+                            if 1 <= df['Rating'].values[i5] < 2:
                                 rate5 = '⭐️'
-                            elif 2 < df['Rating'].values[i5] < 3:
+                            elif 2 <= df['Rating'].values[i5] < 3:
                                 rate5 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i5] < 4:
+                            elif 3 <= df['Rating'].values[i5] < 4:
                                 rate5 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i5] < 5:
+                            elif 4 <= df['Rating'].values[i5] < 5:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i5] < 6:
+                            elif 5 <= df['Rating'].values[i5] < 6:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
@@ -1134,15 +1132,15 @@ if pages == 'Collage of Engineering':
                          width=198)
 
             with col2:
-                if 1 < df['Rating'].values[i0] < 2:
+                if 1 <= df['Rating'].values[i0] < 2:
                     rate = '⭐️'
-                elif 2 < df['Rating'].values[i0] < 3:
+                elif 2 <= df['Rating'].values[i0] < 3:
                     rate = '⭐️ ⭐️ ️'
-                elif 3 < df['Rating'].values[i0] < 4:
+                elif 3 <= df['Rating'].values[i0] < 4:
                     rate = '⭐️ ⭐️ ⭐️ ️'
-                elif 4 < df['Rating'].values[i0] < 5:
+                elif 4 <= df['Rating'].values[i0] < 5:
                     rate = '⭐️ ⭐️ ⭐️ ⭐️'
-                elif 5 < df['Rating'].values[i0] < 6:
+                elif 5 <= df['Rating'].values[i0] < 6:
                     rate = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
@@ -1172,15 +1170,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i1] < 2:
+                            if 1 <= df['Rating'].values[i1] < 2:
                                 rate1 = '⭐️'
-                            elif 2 < df['Rating'].values[i1] < 3:
+                            elif 2 <= df['Rating'].values[i1] < 3:
                                 rate1 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i1] < 4:
+                            elif 3 <= df['Rating'].values[i1] < 4:
                                 rate1 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i1] < 5:
+                            elif 4 <= df['Rating'].values[i1] < 5:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i1] < 6:
+                            elif 5 <= df['Rating'].values[i1] < 6:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
@@ -1200,15 +1198,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i2] < 2:
+                            if 1 <= df['Rating'].values[i2] < 2:
                                 rate2 = '⭐️'
-                            elif 2 < df['Rating'].values[i2] < 3:
+                            elif 2 <= df['Rating'].values[i2] < 3:
                                 rate2 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i2] < 4:
+                            elif 3 <= df['Rating'].values[i2] < 4:
                                 rate2 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i2] < 5:
+                            elif 4 <= df['Rating'].values[i2] < 5:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i2] < 6:
+                            elif 5 <= df['Rating'].values[i2] < 6:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
@@ -1228,15 +1226,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i3] < 2:
+                            if 1 <= df['Rating'].values[i3] < 2:
                                 rate3 = '⭐️'
-                            elif 2 < df['Rating'].values[i3] < 3:
+                            elif 2 <= df['Rating'].values[i3] < 3:
                                 rate3 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i3] < 4:
+                            elif 3 <= df['Rating'].values[i3] < 4:
                                 rate3 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i3] < 5:
+                            elif 4 <= df['Rating'].values[i3] < 5:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i3] < 6:
+                            elif 5 <= df['Rating'].values[i3] < 6:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
@@ -1256,15 +1254,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i4] < 2:
+                            if 1 <= df['Rating'].values[i4] < 2:
                                 rate4 = '⭐️'
-                            elif 2 < df['Rating'].values[i4] < 3:
+                            elif 2 <= df['Rating'].values[i4] < 3:
                                 rate4 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i4] < 4:
+                            elif 3 <= df['Rating'].values[i4] < 4:
                                 rate4 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i4] < 5:
+                            elif 4 <= df['Rating'].values[i4] < 5:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i4] < 6:
+                            elif 5 <= df['Rating'].values[i4] < 6:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
@@ -1284,15 +1282,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i5] < 2:
+                            if 1 <= df['Rating'].values[i5] < 2:
                                 rate5 = '⭐️'
-                            elif 2 < df['Rating'].values[i5] < 3:
+                            elif 2 <= df['Rating'].values[i5] < 3:
                                 rate5 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i5] < 4:
+                            elif 3 <= df['Rating'].values[i5] < 4:
                                 rate5 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i5] < 5:
+                            elif 4 <= df['Rating'].values[i5] < 5:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i5] < 6:
+                            elif 5 <= df['Rating'].values[i5] < 6:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
@@ -1325,15 +1323,15 @@ if pages == 'Collage of Engineering':
                          width=198)
 
             with col2:
-                if 1 < df['Rating'].values[i0] < 2:
+                if 1 <= df['Rating'].values[i0] < 2:
                     rate = '⭐️'
-                elif 2 < df['Rating'].values[i0] < 3:
+                elif 2 <= df['Rating'].values[i0] < 3:
                     rate = '⭐️ ⭐️ ️'
-                elif 3 < df['Rating'].values[i0] < 4:
+                elif 3 <= df['Rating'].values[i0] < 4:
                     rate = '⭐️ ⭐️ ⭐️ ️'
-                elif 4 < df['Rating'].values[i0] < 5:
+                elif 4 <= df['Rating'].values[i0] < 5:
                     rate = '⭐️ ⭐️ ⭐️ ⭐️'
-                elif 5 < df['Rating'].values[i0] < 6:
+                elif 5 <= df['Rating'].values[i0] < 6:
                     rate = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
@@ -1363,15 +1361,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i1] < 2:
+                            if 1 <= df['Rating'].values[i1] < 2:
                                 rate1 = '⭐️'
-                            elif 2 < df['Rating'].values[i1] < 3:
+                            elif 2 <= df['Rating'].values[i1] < 3:
                                 rate1 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i1] < 4:
+                            elif 3 <= df['Rating'].values[i1] < 4:
                                 rate1 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i1] < 5:
+                            elif 4 <= df['Rating'].values[i1] < 5:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i1] < 6:
+                            elif 5 <= df['Rating'].values[i1] < 6:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
@@ -1391,15 +1389,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i2] < 2:
+                            if 1 <= df['Rating'].values[i2] < 2:
                                 rate2 = '⭐️'
-                            elif 2 < df['Rating'].values[i2] < 3:
+                            elif 2 <= df['Rating'].values[i2] < 3:
                                 rate2 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i2] < 4:
+                            elif 3 <= df['Rating'].values[i2] < 4:
                                 rate2 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i2] < 5:
+                            elif 4 <= df['Rating'].values[i2] < 5:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i2] < 6:
+                            elif 5 <= df['Rating'].values[i2] < 6:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
@@ -1419,15 +1417,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i3] < 2:
+                            if 1 <= df['Rating'].values[i3] < 2:
                                 rate3 = '⭐️'
-                            elif 2 < df['Rating'].values[i3] < 3:
+                            elif 2 <= df['Rating'].values[i3] < 3:
                                 rate3 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i3] < 4:
+                            elif 3 <= df['Rating'].values[i3] < 4:
                                 rate3 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i3] < 5:
+                            elif 4 <= df['Rating'].values[i3] < 5:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i3] < 6:
+                            elif 5 <= df['Rating'].values[i3] < 6:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
@@ -1447,15 +1445,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i4] < 2:
+                            if 1 <= df['Rating'].values[i4] < 2:
                                 rate4 = '⭐️'
-                            elif 2 < df['Rating'].values[i4] < 3:
+                            elif 2 <= df['Rating'].values[i4] < 3:
                                 rate4 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i4] < 4:
+                            elif 3 <= df['Rating'].values[i4] < 4:
                                 rate4 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i4] < 5:
+                            elif 4 <= df['Rating'].values[i4] < 5:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i4] < 6:
+                            elif 5 <= df['Rating'].values[i4] < 6:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
@@ -1475,15 +1473,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i5] < 2:
+                            if 1 <= df['Rating'].values[i5] < 2:
                                 rate5 = '⭐️'
-                            elif 2 < df['Rating'].values[i5] < 3:
+                            elif 2 <= df['Rating'].values[i5] < 3:
                                 rate5 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i5] < 4:
+                            elif 3 <= df['Rating'].values[i5] < 4:
                                 rate5 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i5] < 5:
+                            elif 4 <= df['Rating'].values[i5] < 5:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i5] < 6:
+                            elif 5 <= df['Rating'].values[i5] < 6:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
@@ -1516,15 +1514,15 @@ if pages == 'Collage of Engineering':
                          width=198)
 
             with col2:
-                if 1 < df['Rating'].values[i0] < 2:
+                if 1 <= df['Rating'].values[i0] < 2:
                     rate = '⭐️'
-                elif 2 < df['Rating'].values[i0] < 3:
+                elif 2 <= df['Rating'].values[i0] < 3:
                     rate = '⭐️ ⭐️ ️'
-                elif 3 < df['Rating'].values[i0] < 4:
+                elif 3 <= df['Rating'].values[i0] < 4:
                     rate = '⭐️ ⭐️ ⭐️ ️'
-                elif 4 < df['Rating'].values[i0] < 5:
+                elif 4 <= df['Rating'].values[i0] < 5:
                     rate = '⭐️ ⭐️ ⭐️ ⭐️'
-                elif 5 < df['Rating'].values[i0] < 6:
+                elif 5 <= df['Rating'].values[i0] < 6:
                     rate = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
@@ -1554,15 +1552,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i1] < 2:
+                            if 1 <= df['Rating'].values[i1] < 2:
                                 rate1 = '⭐️'
-                            elif 2 < df['Rating'].values[i1] < 3:
+                            elif 2 <= df['Rating'].values[i1] < 3:
                                 rate1 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i1] < 4:
+                            elif 3 <= df['Rating'].values[i1] < 4:
                                 rate1 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i1] < 5:
+                            elif 4 <= df['Rating'].values[i1] < 5:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i1] < 6:
+                            elif 5 <= df['Rating'].values[i1] < 6:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
@@ -1582,15 +1580,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i2] < 2:
+                            if 1 <= df['Rating'].values[i2] < 2:
                                 rate2 = '⭐️'
-                            elif 2 < df['Rating'].values[i2] < 3:
+                            elif 2 <= df['Rating'].values[i2] < 3:
                                 rate2 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i2] < 4:
+                            elif 3 <= df['Rating'].values[i2] < 4:
                                 rate2 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i2] < 5:
+                            elif 4 <= df['Rating'].values[i2] < 5:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i2] < 6:
+                            elif 5 <= df['Rating'].values[i2] < 6:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
@@ -1610,15 +1608,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i3] < 2:
+                            if 1 <= df['Rating'].values[i3] < 2:
                                 rate3 = '⭐️'
-                            elif 2 < df['Rating'].values[i3] < 3:
+                            elif 2 <= df['Rating'].values[i3] < 3:
                                 rate3 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i3] < 4:
+                            elif 3 <= df['Rating'].values[i3] < 4:
                                 rate3 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i3] < 5:
+                            elif 4 <= df['Rating'].values[i3] < 5:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i3] < 6:
+                            elif 5 <= df['Rating'].values[i3] < 6:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
@@ -1638,15 +1636,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i4] < 2:
+                            if 1 <= df['Rating'].values[i4] < 2:
                                 rate4 = '⭐️'
-                            elif 2 < df['Rating'].values[i4] < 3:
+                            elif 2 <= df['Rating'].values[i4] < 3:
                                 rate4 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i4] < 4:
+                            elif 3 <= df['Rating'].values[i4] < 4:
                                 rate4 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i4] < 5:
+                            elif 4 <= df['Rating'].values[i4] < 5:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i4] < 6:
+                            elif 5 <= df['Rating'].values[i4] < 6:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
@@ -1666,15 +1664,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i5] < 2:
+                            if 1 <= df['Rating'].values[i5] < 2:
                                 rate5 = '⭐️'
-                            elif 2 < df['Rating'].values[i5] < 3:
+                            elif 2 <= df['Rating'].values[i5] < 3:
                                 rate5 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i5] < 4:
+                            elif 3 <= df['Rating'].values[i5] < 4:
                                 rate5 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i5] < 5:
+                            elif 4 <= df['Rating'].values[i5] < 5:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i5] < 6:
+                            elif 5 <= df['Rating'].values[i5] < 6:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
@@ -1707,15 +1705,15 @@ if pages == 'Collage of Engineering':
                          width=198)
 
             with col2:
-                if 1 < df['Rating'].values[i0] < 2:
+                if 1 <= df['Rating'].values[i0] < 2:
                     rate = '⭐️'
-                elif 2 < df['Rating'].values[i0] < 3:
+                elif 2 <= df['Rating'].values[i0] < 3:
                     rate = '⭐️ ⭐️ ️'
-                elif 3 < df['Rating'].values[i0] < 4:
+                elif 3 <= df['Rating'].values[i0] < 4:
                     rate = '⭐️ ⭐️ ⭐️ ️'
-                elif 4 < df['Rating'].values[i0] < 5:
+                elif 4 <= df['Rating'].values[i0] < 5:
                     rate = '⭐️ ⭐️ ⭐️ ⭐️'
-                elif 5 < df['Rating'].values[i0] < 6:
+                elif 5 <= df['Rating'].values[i0] < 6:
                     rate = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                 st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
@@ -1745,15 +1743,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i1] < 2:
+                            if 1 <= df['Rating'].values[i1] < 2:
                                 rate1 = '⭐️'
-                            elif 2 < df['Rating'].values[i1] < 3:
+                            elif 2 <= df['Rating'].values[i1] < 3:
                                 rate1 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i1] < 4:
+                            elif 3 <= df['Rating'].values[i1] < 4:
                                 rate1 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i1] < 5:
+                            elif 4 <= df['Rating'].values[i1] < 5:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i1] < 6:
+                            elif 5 <= df['Rating'].values[i1] < 6:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
@@ -1773,15 +1771,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i2] < 2:
+                            if 1 <= df['Rating'].values[i2] < 2:
                                 rate2 = '⭐️'
-                            elif 2 < df['Rating'].values[i2] < 3:
+                            elif 2 <= df['Rating'].values[i2] < 3:
                                 rate2 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i2] < 4:
+                            elif 3 <= df['Rating'].values[i2] < 4:
                                 rate2 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i2] < 5:
+                            elif 4 <= df['Rating'].values[i2] < 5:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i2] < 6:
+                            elif 5 <= df['Rating'].values[i2] < 6:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
@@ -1801,15 +1799,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i3] < 2:
+                            if 1 <= df['Rating'].values[i3] < 2:
                                 rate3 = '⭐️'
-                            elif 2 < df['Rating'].values[i3] < 3:
+                            elif 2 <= df['Rating'].values[i3] < 3:
                                 rate3 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i3] < 4:
+                            elif 3 <= df['Rating'].values[i3] < 4:
                                 rate3 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i3] < 5:
+                            elif 4 <= df['Rating'].values[i3] < 5:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i3] < 6:
+                            elif 5 <= df['Rating'].values[i3] < 6:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
@@ -1829,15 +1827,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i4] < 2:
+                            if 1 <= df['Rating'].values[i4] < 2:
                                 rate4 = '⭐️'
-                            elif 2 < df['Rating'].values[i4] < 3:
+                            elif 2 <= df['Rating'].values[i4] < 3:
                                 rate4 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i4] < 4:
+                            elif 3 <= df['Rating'].values[i4] < 4:
                                 rate4 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i4] < 5:
+                            elif 4 <= df['Rating'].values[i4] < 5:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i4] < 6:
+                            elif 5 <= df['Rating'].values[i4] < 6:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
@@ -1857,15 +1855,15 @@ if pages == 'Collage of Engineering':
                                      width=198)
 
                         with col2:
-                            if 1 < df['Rating'].values[i5] < 2:
+                            if 1 <= df['Rating'].values[i5] < 2:
                                 rate5 = '⭐️'
-                            elif 2 < df['Rating'].values[i5] < 3:
+                            elif 2 <= df['Rating'].values[i5] < 3:
                                 rate5 = '⭐️ ⭐️ ️'
-                            elif 3 < df['Rating'].values[i5] < 4:
+                            elif 3 <= df['Rating'].values[i5] < 4:
                                 rate5 = '⭐️ ⭐️ ⭐️ ️'
-                            elif 4 < df['Rating'].values[i5] < 5:
+                            elif 4 <= df['Rating'].values[i5] < 5:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐️'
-                            elif 5 < df['Rating'].values[i5] < 6:
+                            elif 5 <= df['Rating'].values[i5] < 6:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
                             st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
                             st.write("Rating :             ", rate5)
@@ -1884,17 +1882,11 @@ with st.sidebar.expander("POWERED BY"):
     co1, co2 = st.columns([3, 3])
     with co1:
         st.image('https://cdn3.iconfinder.com/data/icons/social-icons-33/512/Telegram-128.png',
-                         caption='Eng_m1997',
-                         width=73)
+                 caption='Eng_m1997',
+                 width=73)
     with co2:
         st.image(
-            'https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-512.png',
+            'https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000'
+            '/2018_social_media_popular_app_logo_instagram-512.png',
             caption='Eng_mk97',
             width=73)
-
-
-
-
-
-
-
