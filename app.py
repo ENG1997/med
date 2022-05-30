@@ -43,16 +43,16 @@ def clean_text(text):
     return text
 
 
-df['clean_Book_title'] = df['Book_title'].apply(clean_text)
+df['clean_title'] = df['title'].apply(clean_text)
 df.head()
-df['clean_Description'] = df['Description'].apply(clean_text)
+df['clean_desc'] = df['desc'].apply(clean_text)
 df.head()
 
 vectorizer = TfidfVectorizer(analyzer='word', lowercase=False)
-X = vectorizer.fit_transform(df['clean_Book_title'])
+X = vectorizer.fit_transform(df['clean_title'])
 title_vectors = X.toarray()
 desc_vectorizer = TfidfVectorizer(analyzer='word', lowercase=False)
-Y = desc_vectorizer.fit_transform(df['clean_Description'])
+Y = desc_vectorizer.fit_transform(df['clean_desc'])
 desc_vectors = Y.toarray()
 
 
@@ -79,11 +79,11 @@ def get_recommendations_posters(value_of_element, feature_locate, vectors_array,
 
     for _ in idx:
         simular = all_values.values[idx]
-    i1 = df[df['Book_title'] == simular[0][0]].index.values[0]
-    i2 = df[df['Book_title'] == simular[1][0]].index.values[0]
-    i3 = df[df['Book_title'] == simular[2][0]].index.values[0]
-    i4 = df[df['Book_title'] == simular[3][0]].index.values[0]
-    i5 = df[df['Book_title'] == simular[4][0]].index.values[0]
+    i1 = df[df['title'] == simular[0][0]].index.values[0]
+    i2 = df[df['title'] == simular[1][0]].index.values[0]
+    i3 = df[df['title'] == simular[2][0]].index.values[0]
+    i4 = df[df['title'] == simular[3][0]].index.values[0]
+    i5 = df[df['title'] == simular[4][0]].index.values[0]
 
     return
 
@@ -105,18 +105,18 @@ nltk.download('stopwords')
 stop = stopwords.words('english')
 stop = set(stop)
 
-df['clean_Book_title'] = df['Book_title'].apply(clean_text)
+df['clean_title'] = df['title'].apply(clean_text)
 df.head()
 
-df['clean_Description'] = df['Description'].apply(clean_text)
+df['clean_desc'] = df['desc'].apply(clean_text)
 df.head()
 
 vectorizer = TfidfVectorizer(analyzer='word', lowercase=False)
-X = vectorizer.fit_transform(df['clean_Book_title'])
+X = vectorizer.fit_transform(df['clean_title'])
 title_vectors = X.toarray()
 
 desc_vectorizer = TfidfVectorizer(analyzer='word', lowercase=False)
-Y = desc_vectorizer.fit_transform(df['clean_Description'])
+Y = desc_vectorizer.fit_transform(df['clean_desc'])
 desc_vectors = Y.toarray()
 
 tk = 0
@@ -132,7 +132,7 @@ if pages == 'All Books':
     col1, col2 = st.columns([10, 1])
 
     with col1:
-        selected_book_name = st.selectbox('Enter book name that you liked : ', books['Book_title'].values)
+        selected_book_name = st.selectbox('Enter book name that you liked : ', books['title'].values)
 
         b1 = st.button('Search')
         '\n'
@@ -142,6 +142,7 @@ if pages == 'All Books':
             tk = 1
     if tk == 1:
         import time
+
         with st.spinner('Wait, Please...🧐'):
             time.sleep(3)
         my_bar = st.progress(0)
@@ -153,7 +154,7 @@ if pages == 'All Books':
     if tk == 1:
         col1, col2 = st.columns([2.2, 5])
 
-        i0 = df[df['Book_title'] == selected_book_name].index.values[0]
+        i0 = df[df['title'] == selected_book_name].index.values[0]
 
         with col1:
 
@@ -162,10 +163,10 @@ if pages == 'All Books':
                      width=198)
 
         with col2:
-            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
+            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i0])
             st.write("author :       ", df['author'].values[i0])
             st.write("publisher :        ", df['publisher'].values[i0])
-            st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i0])
+            st.write("No. Of Pages : ", df['pages'].values[i0])
             st.write("language :      ", df['language'].values[i0])
             st.write("Download :      ", df['download_link'].values[i0])
             st.write("Size:      ", df['file'].values[i0])
@@ -176,7 +177,7 @@ if pages == 'All Books':
         '\n'
         '\n'
         st.success('Recommending books similar to ' + selected_book_name)
-        get_recommendations_posters(selected_book_name, 'Book_title', title_vectors, 'Book_title')
+        get_recommendations_posters(selected_book_name, 'title', title_vectors, 'title')
         if tk == 1:
             with st.expander('Click To Show Recommendations'):
                 '\n'
@@ -188,15 +189,14 @@ if pages == 'All Books':
                     col1, col2 = st.columns([2.2, 5])
                     with col1:
                         st.image(df['image'].values[i1],
-                                 caption=df['Book_title'].values[i1],
+                                 caption=df['title'].values[i1],
                                  width=170)
 
                     with col2:
-
-                        st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
+                        st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i1])
                         st.write("author :       ", df['author'].values[i0])
                         st.write("publisher :        ", df['publisher'].values[i1])
-                        st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i1])
+                        st.write("No. Of Pages : ", df['pages'].values[i1])
                         st.write("language :      ", df['language'].values[i1])
                         st.write("Download :      ", df['download_link'].values[i1])
                         st.write("Size:      ", df['file'].values[i1])
@@ -208,82 +208,80 @@ if pages == 'All Books':
                     col1, col2 = st.columns([2.2, 5])
                     with col1:
                         st.image(df['image'].values[i2],
-                                 caption=df['Book_title'].values[i2],
+                                 caption=df['title'].values[i2],
                                  width=170)
 
                     with col2:
+                        st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i2])
+                        st.write("author :       ", df['author'].values[i2])
+                        st.write("publisher :        ", df['publisher'].values[i2])
+                        st.write("No. Of Pages : ", df['pages'].values[i2])
+                        st.write("language :      ", df['language'].values[i2])
+                        st.write("Download :      ", df['download_link'].values[i2])
+                        st.write("Size:      ", df['file'].values[i2])
+                        '\n'
+                        '\n'
+                        '\n'
+                st.progress(100)
 
-                       st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
-                       st.write("author :       ", df['author'].values[i2])
-                       st.write("publisher :        ", df['publisher'].values[i2])
-                       st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i2])
-                       st.write("language :      ", df['language'].values[i2])
-                       st.write("Download :      ", df['download_link'].values[i2])
-                       st.write("Size:      ", df['file'].values[i2])
-                        '\n'
-                        '\n'
-                        '\n'
-                    st.progress(100)
+                col1, col2 = st.columns([2.2, 5])
+                with col1:
+                    st.image(df['image'].values[i3],
+                             caption=df['title'].values[i3],
+                             width=170)
 
-                    col1, col2 = st.columns([2.2, 5])
-                    with col1:
-                        st.image(df['image'].values[i3],
-                                 caption=df['Book_title'].values[i3],
-                                 width=170)
+                with col2:
+                    st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i3])
+                    st.write("author :       ", df['author'].values[i2])
+                    st.write("publisher :        ", df['publisher'].values[i3])
+                    st.write("No. Of Pages : ", df['pages'].values[i3])
+                    st.write("language :      ", df['language'].values[i3])
+                    st.write("Download :      ", df['download_link'].values[i3])
+                    st.write("Size:      ", df['file'].values[i3])
+                    '\n'
+                    '\n'
+                    '\n'
+            st.progress(100)
 
-                    with col2:
+            col1, col2 = st.columns([2.2, 5])
+            with col1:
+                st.image(df['image'].values[i4],
+                         caption=df['title'].values[i4],
+                         width=170)
 
-                       st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
-                       st.write("author :       ", df['author'].values[i2])
-                       st.write("publisher :        ", df['publisher'].values[i3])
-                       st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i3])
-                       st.write("language :      ", df['language'].values[i3])
-                       st.write("Download :      ", df['download_link'].values[i3])
-                       st.write("Size:      ", df['file'].values[i3])
-                        '\n'
-                        '\n'
-                        '\n'
-                    st.progress(100)
+            with col2:
 
-                    col1, col2 = st.columns([2.2, 5])
-                    with col1:
-                        st.image(df['image'].values[i4],
-                                 caption=df['Book_title'].values[i4],
-                                 width=170)
+                st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i4])
+                st.write("author :       ", df['author'].values[i4])
+                st.write("publisher :        ", df['publisher'].values[i4])
+                st.write("No. Of Pages : ", df['pages'].values[i4])
+                st.write("language :      ", df['language'].values[i4])
+                st.write("Download :      ", df['download_link'].values[i4])
+                st.write("Size:      ", df['file'].values[i4])
+                '\n'
+                '\n'
+                '\n'
+        st.progress(100)
 
-                    with col2:
+        col1, col2 = st.columns([2.2, 5])
+        with col1:
+            st.image(df['image'].values[i5],
+                     caption=df['title'].values[i5],
+                     width=170)
 
-                       st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
-                       st.write("author :       ", df['author'].values[i4])
-                       st.write("publisher :        ", df['publisher'].values[i4])
-                       st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i4])
-                       st.write("language :      ", df['language'].values[i4])
-                       st.write("Download :      ", df['download_link'].values[i4])
-                       st.write("Size:      ", df['file'].values[i4])
-                        '\n'
-                        '\n'
-                        '\n'
-                    st.progress(100)
+        with col2:
 
-                    col1, col2 = st.columns([2.2, 5])
-                    with col1:
-                        st.image(df['image'].values[i5],
-                                 caption=df['Book_title'].values[i5],
-                                 width=170)
-
-                    with col2:
-
-                       st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
-                       st.write("author :       ", df['author'].values[i5])
-                       st.write("publisher :        ", df['publisher'].values[i5])
-                       st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i5])
-                       st.write("language :      ", df['language'].values[i5])
-                       st.write("Download :      ", df['download_link'].values[i5])
-                       st.write("Size:      ", df['file'].values[i5])
-                        '\n'
-                        '\n'
-                        '\n'
-                    st.progress(100)
+            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i5])
+            st.write("author :       ", df['author'].values[i5])
+            st.write("publisher :        ", df['publisher'].values[i5])
+            st.write("No. Of Pages : ", df['pages'].values[i5])
+            st.write("language :      ", df['language'].values[i5])
+            st.write("Download :      ", df['download_link'].values[i5])
+            st.write("Size:      ", df['file'].values[i5])
+            '\n'
+            '\n'
+            '\n'
+    st.progress(100)
 if pages == 'Collage of Engineering':
     with st.sidebar:
         dep = st.radio('Select Your Department ', ['Computer Engineering&Software',
@@ -297,18 +295,18 @@ if pages == 'Collage of Engineering':
                                                    'Water Resources Engineering'])
 
     if dep == 'Computer Engineering&Software':
-        selected_book_name_dep = st.selectbox('', books['Book_title'].values)
+        selected_book_name_dep = st.selectbox('', books['title'].values)
 
         bsearch = st.button('Search')
         tk1 = 0
         if bsearch:
             tk1 = 1
-            get_recommendations_posters(selected_book_name_dep, 'Book_title', title_vectors, 'Book_title')
+            get_recommendations_posters(selected_book_name_dep, 'title', title_vectors, 'title')
 
         if tk1 == 1:
             col1, col2 = st.columns([2.1, 5])
 
-            i0 = df[df['Book_title'] == selected_book_name_dep].index.values[0]
+            i0 = df[df['title'] == selected_book_name_dep].index.values[0]
 
             with col1:
 
@@ -328,11 +326,11 @@ if pages == 'Collage of Engineering':
                 elif 5 <= df['Rating'].values[i0] < 6:
                     rate = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
-                st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
+                st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i0])
                 st.write("Rating :       ", rate)
                 st.write("Price :        $", df['Price'].values[i0])
                 st.write("Reviews :      ", df['Reviews'].values[i0])
-                st.write("No. Of Pages : ", df['Number_Of_Pages'].values[i0])
+                st.write("No. Of Pages : ", df['pages'].values[i0])
 
             '\n'
             '\n'
@@ -351,7 +349,7 @@ if pages == 'Collage of Engineering':
                         col1, col2 = st.columns([2.1, 5])
                         with col1:
                             st.image(df['image'].values[i1],
-                                     caption=df['Book_title'].values[i1],
+                                     caption=df['title'].values[i1],
                                      width=198)
 
                         with col2:
@@ -366,7 +364,7 @@ if pages == 'Collage of Engineering':
                             elif 5 <= df['Rating'].values[i1] < 6:
                                 rate1 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
-                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i1])
+                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i1])
                             st.write("Rating :             ", rate1)
                             st.write("Price :              $", df['Price'].values[i1])
                             st.write("Reviews :            ", df['Reviews'].values[i1])
@@ -394,7 +392,7 @@ if pages == 'Collage of Engineering':
                             elif 5 <= df['Rating'].values[i2] < 6:
                                 rate2 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
-                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i2])
+                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i2])
                             st.write("Rating :          ", rate2)
                             st.write("Price :           $", df['Price'].values[i2])
                             st.write("Reviews :         ", df['Reviews'].values[i2])
@@ -422,7 +420,7 @@ if pages == 'Collage of Engineering':
                             elif 5 <= df['Rating'].values[i3] < 6:
                                 rate3 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
-                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i3])
+                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i3])
                             st.write("Rating :          ", rate3)
                             st.write("Price :           $", df['Price'].values[i3])
                             st.write("Reviews :         ", df['Reviews'].values[i3])
@@ -450,7 +448,7 @@ if pages == 'Collage of Engineering':
                             elif 5 <= df['Rating'].values[i4] < 6:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
-                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
+                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i4])
                             st.write("Rating : ", rate4)
                             st.write("Price : $", df['Price'].values[i4])
                             st.write("Reviews : ", df['Reviews'].values[i4])
@@ -477,7 +475,7 @@ if pages == 'Collage of Engineering':
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐️'
                             elif 5 <= df['Rating'].values[i5] < 6:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
-                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
+                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i5])
                             st.write("Rating :             ", rate5)
                             st.write("Price :              $", df['Price'].values[i5])
                             st.write("Reviews :            ", df['Reviews'].values[i5])
@@ -519,7 +517,7 @@ if pages == 'Collage of Engineering':
                 elif 5 <= df['Rating'].values[i0] < 6:
                     rate = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
-                st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i0])
+                st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i0])
                 st.write("Rating :       ", rate)
                 st.write("Price :        $", df['Price'].values[i0])
                 st.write("Reviews :      ", df['Reviews'].values[i0])
@@ -1787,7 +1785,7 @@ if pages == 'Collage of Engineering':
                             elif 5 <= df['Rating'].values[i4] < 6:
                                 rate4 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
 
-                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i4])
+                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i4])
                             st.write("Rating : ", rate4)
                             st.write("Price : $", df['Price'].values[i4])
                             st.write("Reviews : ", df['Reviews'].values[i4])
@@ -1814,11 +1812,11 @@ if pages == 'Collage of Engineering':
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐️'
                             elif 5 <= df['Rating'].values[i5] < 6:
                                 rate5 = '⭐️ ⭐️ ⭐️ ⭐ ⭐️'
-                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['Description'].values[i5])
+                            st.text_area("𝐃𝐄𝐓𝐀𝐈𝐋𝐒 👇 👇", df['desc'].values[i5])
                             st.write("Rating :             ", rate5)
                             st.write("Price :              $", df['Price'].values[i5])
                             st.write("Reviews :            ", df['Reviews'].values[i5])
-                            st.write("No. Of Pages :       ", df['Number_Of_Pages'].values[i5])
+                            st.write("No. Of Pages :       ", df['pages'].values[i5])
                             '\n'
                             '\n'
                             '\n'
@@ -1826,7 +1824,7 @@ if pages == 'Collage of Engineering':
 with st.sidebar.expander("POWERED BY"):
     st.write(""" 
                 |𝐄𝐍𝐆. 𝐌𝐎𝐇𝐀𝐌𝐌𝐄𝐃 𝐊𝐇𝐀𝐋𝐈𝐃| \n
-                
+
                  """)
     co1, co2 = st.columns([3, 3])
     with co1:
@@ -1839,6 +1837,5 @@ with st.sidebar.expander("POWERED BY"):
             '/2018_social_media_popular_app_logo_instagram-512.png',
             caption='Eng_mk97',
             width=73)
-if pages == 'College of Medicine' || 'College of Dentistry' ||'College of Pharmacy ':
+if pages == 'College of Medicine' or 'College of Dentistry' or 'College of Pharmacy ':
     st.write(""" Comming Soon 🔥 ⚙️ 🕚 """)
-    
